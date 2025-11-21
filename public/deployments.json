@@ -1,0 +1,312 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-21T00:00:00Z",
+  "deployments": [
+    {
+      "id": "10bed-mumbai-001",
+      "name": "Lilavati Hospital ICU",
+      "description": "10-bed ICU deployment with advanced monitoring systems and ventilator support for critical care patients.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": 19.0760,
+        "longitude": 72.8777,
+        "address": {
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-03-15",
+      "website": "https://example.com/mumbai-icu",
+      "status": "active"
+    },
+    {
+      "id": "kerala-trivandrum-001",
+      "name": "Trivandrum Medical College",
+      "description": "Comprehensive digital health management system connecting 50+ departments and managing 500+ beds.",
+      "program": "kerala-care",
+      "location": {
+        "latitude": 8.5241,
+        "longitude": 76.9366,
+        "address": {
+          "city": "Trivandrum",
+          "state": "Kerala",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2023-11-20",
+      "website": "https://example.com/trivandrum",
+      "status": "active"
+    },
+    {
+      "id": "palliative-kochi-001",
+      "name": "Kochi Palliative Network",
+      "description": "Network of 12 palliative care centers providing end-of-life care and pain management services.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": 9.9312,
+        "longitude": 76.2673,
+        "address": {
+          "city": "Kochi",
+          "state": "Kerala",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-01-10",
+      "website": "https://example.com/kochi-palliative",
+      "status": "active"
+    },
+    {
+      "id": "hmis-bangalore-001",
+      "name": "Victoria Hospital HMIS",
+      "description": "Hospital Management Information System serving 1200 beds with integrated pharmacy, lab, and billing modules.",
+      "program": "hmis",
+      "location": {
+        "latitude": 12.9716,
+        "longitude": 77.5946,
+        "address": {
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-06-01",
+      "website": "https://example.com/bangalore-hmis",
+      "status": "active"
+    },
+    {
+      "id": "10bed-nairobi-001",
+      "name": "Kenyatta National Hospital ICU",
+      "description": "State-of-the-art 10-bed ICU with telemedicine capabilities for remote consultations.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": -1.2921,
+        "longitude": 36.8219,
+        "address": {
+          "city": "Nairobi",
+          "country": "Kenya"
+        }
+      },
+      "dateDeployed": "2024-08-12",
+      "status": "active"
+    },
+    {
+      "id": "kerala-calicut-001",
+      "name": "Calicut Medical College",
+      "description": "Integrated healthcare platform managing outpatient, inpatient, and emergency services across 800 beds.",
+      "program": "kerala-care",
+      "location": {
+        "latitude": 11.2588,
+        "longitude": 75.7804,
+        "address": {
+          "city": "Calicut",
+          "state": "Kerala",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2023-09-18",
+      "website": "https://example.com/calicut",
+      "status": "active"
+    },
+    {
+      "id": "palliative-london-001",
+      "name": "St Christopher's Hospice",
+      "description": "Leading palliative care facility with 48 inpatient beds and home care services for 300+ patients.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": 51.4071,
+        "longitude": -0.0692,
+        "address": {
+          "city": "London",
+          "country": "United Kingdom"
+        }
+      },
+      "dateDeployed": "2024-02-28",
+      "website": "https://example.com/london-hospice",
+      "status": "active"
+    },
+    {
+      "id": "hmis-dhaka-001",
+      "name": "Dhaka Medical College Hospital",
+      "description": "Comprehensive HMIS managing 2600 beds, 35 departments with digital health records and analytics.",
+      "program": "hmis",
+      "location": {
+        "latitude": 23.8103,
+        "longitude": 90.4125,
+        "address": {
+          "city": "Dhaka",
+          "country": "Bangladesh"
+        }
+      },
+      "dateDeployed": "2024-04-22",
+      "status": "active"
+    },
+    {
+      "id": "10bed-jakarta-001",
+      "name": "Cipto Mangunkusumo Hospital ICU",
+      "description": "Advanced ICU with 10 beds equipped with latest monitoring technology and ventilator support.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": -6.2088,
+        "longitude": 106.8456,
+        "address": {
+          "city": "Jakarta",
+          "country": "Indonesia"
+        }
+      },
+      "dateDeployed": "2024-07-05",
+      "website": "https://example.com/jakarta-icu",
+      "status": "active"
+    },
+    {
+      "id": "kerala-ernakulam-001",
+      "name": "Ernakulam General Hospital",
+      "description": "Digital healthcare platform managing 600+ beds with telemedicine and mobile health integration.",
+      "program": "kerala-care",
+      "location": {
+        "latitude": 9.9816,
+        "longitude": 76.2999,
+        "address": {
+          "city": "Ernakulam",
+          "state": "Kerala",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-05-14",
+      "status": "active"
+    },
+    {
+      "id": "palliative-toronto-001",
+      "name": "Princess Margaret Cancer Centre",
+      "description": "Integrated palliative care program serving 200+ patients with specialized pain management.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": 43.6532,
+        "longitude": -79.3832,
+        "address": {
+          "city": "Toronto",
+          "country": "Canada"
+        }
+      },
+      "dateDeployed": "2023-12-10",
+      "website": "https://example.com/toronto-palliative",
+      "status": "active"
+    },
+    {
+      "id": "hmis-kathmandu-001",
+      "name": "Tribhuvan University Teaching Hospital",
+      "description": "HMIS deployment for 700-bed teaching hospital with research integration and student training modules.",
+      "program": "hmis",
+      "location": {
+        "latitude": 27.7172,
+        "longitude": 85.3240,
+        "address": {
+          "city": "Kathmandu",
+          "country": "Nepal"
+        }
+      },
+      "dateDeployed": "2024-03-30",
+      "status": "active"
+    },
+    {
+      "id": "10bed-singapore-001",
+      "name": "Singapore General Hospital ICU",
+      "description": "High-tech 10-bed ICU with AI-assisted monitoring and predictive analytics for patient outcomes.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": 1.3521,
+        "longitude": 103.8198,
+        "address": {
+          "city": "Singapore",
+          "country": "Singapore"
+        }
+      },
+      "dateDeployed": "2024-09-18",
+      "website": "https://example.com/singapore-icu",
+      "status": "active"
+    },
+    {
+      "id": "palliative-melbourne-001",
+      "name": "Sacred Heart Hospice",
+      "description": "Community-based palliative care network serving 150+ patients with home and inpatient services.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": -37.8136,
+        "longitude": 144.9631,
+        "address": {
+          "city": "Melbourne",
+          "country": "Australia"
+        }
+      },
+      "dateDeployed": "2024-01-25",
+      "website": "https://example.com/melbourne-hospice",
+      "status": "active"
+    },
+    {
+      "id": "hmis-colombo-001",
+      "name": "National Hospital of Sri Lanka",
+      "description": "Largest HMIS deployment in Sri Lanka managing 3000+ beds with integrated emergency and pharmacy systems.",
+      "program": "hmis",
+      "location": {
+        "latitude": 6.9271,
+        "longitude": 79.8612,
+        "address": {
+          "city": "Colombo",
+          "country": "Sri Lanka"
+        }
+      },
+      "dateDeployed": "2024-02-14",
+      "status": "active"
+    },
+    {
+      "id": "10bed-manila-001",
+      "name": "Philippine General Hospital ICU",
+      "description": "Modern 10-bed ICU facility with advanced life support systems and infection control measures.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": 14.5995,
+        "longitude": 120.9842,
+        "address": {
+          "city": "Manila",
+          "country": "Philippines"
+        }
+      },
+      "dateDeployed": "2024-10-03",
+      "status": "active"
+    },
+    {
+      "id": "kerala-thrissur-001",
+      "name": "Thrissur District Hospital",
+      "description": "Digital health platform connecting primary, secondary, and tertiary care facilities across the district.",
+      "program": "kerala-care",
+      "location": {
+        "latitude": 10.5276,
+        "longitude": 76.2144,
+        "address": {
+          "city": "Thrissur",
+          "state": "Kerala",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-04-08",
+      "status": "active"
+    },
+    {
+      "id": "palliative-amsterdam-001",
+      "name": "Amsterdam Palliative Care Network",
+      "description": "Collaborative network of 8 facilities providing specialized end-of-life care and family support.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": 52.3676,
+        "longitude": 4.9041,
+        "address": {
+          "city": "Amsterdam",
+          "country": "Netherlands"
+        }
+      },
+      "dateDeployed": "2023-10-15",
+      "website": "https://example.com/amsterdam-palliative",
+      "status": "active"
+    }
+  ]
+}
