@@ -1,49 +1,116 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import maplibregl from "maplibre-gl";
-import Supercluster from "supercluster";
-import type { Deployment, ProgramType } from "@/types/deployment";
 import { config } from "@/lib/config";
-import { PROGRAM_COLORS, createMarkerElement, createClusterMarkerElement } from "@/lib/map-utils";
+import {
+  PROGRAM_COLORS,
+  createClusterMarkerElement,
+  createMarkerElement,
+} from "@/lib/map-utils";
+import type { Deployment } from "@/types/deployment";
+import maplibregl from "maplibre-gl";
 import { useTheme } from "next-themes";
+import { useEffect, useRef, useState } from "react";
+import Supercluster from "supercluster";
 
 interface DeploymentMapProps {
   deployments: Deployment[];
-  selectedPrograms: Set<ProgramType>;
-  searchQuery: string;
   onDeploymentClick?: (deployment: Deployment) => void;
-  isGlobeMode: boolean;
   showLabels: boolean;
+  enableClustering: boolean;
+  highlightedDeploymentId?: string | null;
 }
+
+// Calculate center of India for the animation
+const INDIA_CENTER: [number, number] = [78.9629, 20.5937];
 
 export function DeploymentMap({
   deployments,
-  selectedPrograms,
-  searchQuery,
   onDeploymentClick,
-  isGlobeMode,
   showLabels,
+  enableClustering,
+  highlightedDeploymentId,
 }: DeploymentMapProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
   const markers = useRef<maplibregl.Marker[]>([]);
-  const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const markerElementsMap = useRef<Map<string, HTMLElement>>(new Map());
+  const { resolvedTheme } = useTheme();
+  const [introAnimationComplete, setIntroAnimationComplete] = useState(false);
+  const [showMarkers, setShowMarkers] = useState(false);
+  const animationFrameRef = useRef<number | null>(null);
+  const isInitialMount = useRef(true);
+  const isUpdatingMarkers = useRef(false);
+  const markerTimeouts = useRef<NodeJS.Timeout[]>([]);
+  const currentDeploymentsKey = useRef<string>("");
 
-  // Filter deployments based on selected programs and search query
-  const filteredDeployments = deployments.filter((deployment) => {
-    const programMatch = selectedPrograms.size === 0 || selectedPrograms.has(deployment.program);
-    const searchMatch =
-      searchQuery === "" ||
-      deployment.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      deployment.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return programMatch && searchMatch;
-  });
+  // Create a stable key to reliably detect deployment changes
+  const deploymentsKey = deployments
+    .map((d) => d.id)
+    .sort()
+    .join(",");
 
-  // Initialize map
+  // Intro animation sequence
+  const startIntroAnimation = () => {
+    if (!map.current) return;
+
+    const startTime = Date.now();
+    const spinDuration = 3000; // 2.5 seconds for smoother animation
+    const startZoom = 1.5;
+    // Adjust zoom based on screen size - more zoomed out on mobile
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const endZoom = isMobile ? 3.8 : 4.5;
+
+    // Start at a longitude that will rotate 360° and end at India's longitude
+    // India longitude: 78.96, so we start 360° before that
+    const startLng = INDIA_CENTER[0] - 360;
+    const startLat = INDIA_CENTER[1]; // Keep latitude consistent
+
+    const rotateAndZoom = () => {
+      if (!map.current) return;
+
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / spinDuration, 1); // 0 to 1
+
+      // Custom smooth easing function (cubic ease-in-out for buttery smooth motion)
+      const easeProgress =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      // Zoom calculation with smooth easing
+      const currentZoom = startZoom + (endZoom - startZoom) * easeProgress;
+
+      // Position calculation - smooth rotation from start to India
+      // Use the same easing for rotation to keep everything synchronized
+      const currentLng = startLng + 360 * easeProgress;
+      const currentLat = startLat;
+
+      // Update map with animation options for smooth rendering
+      map.current.jumpTo({
+        center: [currentLng, currentLat],
+        zoom: currentZoom,
+      });
+
+      if (progress < 1) {
+        animationFrameRef.current = requestAnimationFrame(rotateAndZoom);
+      } else {
+        // Animation complete - we're already at India!
+        // Show markers
+        setTimeout(() => {
+          setShowMarkers(true);
+          // Set intro complete after a delay so highlighting works
+          setTimeout(() => {
+            setIntroAnimationComplete(true);
+          }, 1000);
+        }, 200);
+      }
+    };
+
+    rotateAndZoom();
+  };
+
+  // Initialize map with intro animation
   useEffect(() => {
-    setMounted(true);
     if (!mapContainer.current || map.current) return;
 
     const isDark = resolvedTheme === "dark";
@@ -51,31 +118,56 @@ export function DeploymentMap({
       ? `https://api.maptiler.com/maps/streets-v2-dark/style.json?key=${config.maptilerApiKey}`
       : `https://api.maptiler.com/maps/streets-v2/style.json?key=${config.maptilerApiKey}`;
 
+    // Always start with globe view for animation
+    // Start 360° before India's longitude so we can spin and land perfectly on India
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: mapStyle,
-      center: [20, 20], // Center of the world
-      zoom: 2,
-    } as any);
+      center: [INDIA_CENTER[0] - 360, INDIA_CENTER[1]], // Start at India's latitude, 360° before its longitude
+      zoom: 1.5,
+    } as maplibregl.MapOptions);
 
     // Set initial projection and hide labels after style loads
     map.current.once("style.load", () => {
       if (map.current) {
         try {
-          map.current.setProjection(isGlobeMode ? ({ type: "globe" } as any) : { type: "mercator" });
-        } catch (error) {
-          console.warn("Globe projection not supported", error);
+          // Always start with globe for intro animation
+          map.current.setProjection({
+            type: "globe",
+          } as maplibregl.ProjectionSpecification);
+        } catch (_error) {
+          console.warn("Globe projection not supported");
         }
 
         // Hide labels by default
         const style = map.current.getStyle();
-        if (style && style.layers) {
-          style.layers.forEach((layer: any) => {
-            if (layer.type === "symbol" && layer.layout && layer.layout["text-field"]) {
-              map.current!.setLayoutProperty(layer.id, "visibility", showLabels ? "visible" : "none");
+        if (style?.layers) {
+          style.layers.forEach((layer) => {
+            if (
+              layer.type === "symbol" &&
+              layer.layout &&
+              "text-field" in layer.layout
+            ) {
+              map.current!.setLayoutProperty(
+                layer.id,
+                "visibility",
+                showLabels ? "visible" : "none"
+              );
             }
           });
         }
+
+        // Set the initial position FIRST before starting animation
+        // This ensures the map is fully positioned before we begin animating
+        map.current!.jumpTo({
+          center: [INDIA_CENTER[0] - 360, INDIA_CENTER[1]],
+          zoom: 1.5,
+        });
+
+        // Give the map a moment to settle at the starting position
+        setTimeout(() => {
+          startIntroAnimation();
+        }, 1);
       }
     });
 
@@ -91,27 +183,26 @@ export function DeploymentMap({
     );
 
     return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
       if (map.current) {
         map.current.remove();
         map.current = null;
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Update projection when globe mode changes
-  useEffect(() => {
-    if (!map.current || !mounted) return;
-
-    try {
-      map.current.setProjection(isGlobeMode ? ({ type: "globe" } as any) : { type: "mercator" });
-    } catch (error) {
-      console.warn("Globe projection not supported, falling back to mercator", error);
-    }
-  }, [isGlobeMode, mounted]);
 
   // Update map style when theme changes
   useEffect(() => {
-    if (!map.current || !mounted) return;
+    if (!map.current) return;
+
+    // Skip on initial mount - let initialization handle it
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
 
     const isDark = resolvedTheme === "dark";
     const mapStyle = isDark
@@ -124,68 +215,104 @@ export function DeploymentMap({
     map.current.once("style.load", () => {
       if (map.current) {
         try {
-          map.current.setProjection(isGlobeMode ? ({ type: "globe" } as any) : { type: "mercator" });
-        } catch (error) {
-          console.warn("Globe projection not supported", error);
+          map.current.setProjection({
+            type: "globe",
+          } as maplibregl.ProjectionSpecification);
+        } catch (_error) {
+          console.warn("Globe projection not supported");
         }
-        
+
         // Apply label visibility
         const style = map.current.getStyle();
-        if (style && style.layers) {
-          style.layers.forEach((layer: any) => {
-            if (layer.type === "symbol" && layer.layout && layer.layout["text-field"]) {
-              map.current!.setLayoutProperty(layer.id, "visibility", showLabels ? "visible" : "none");
+        if (style?.layers) {
+          style.layers.forEach((layer) => {
+            if (
+              layer.type === "symbol" &&
+              layer.layout &&
+              "text-field" in layer.layout
+            ) {
+              map.current!.setLayoutProperty(
+                layer.id,
+                "visibility",
+                showLabels ? "visible" : "none"
+              );
             }
           });
         }
       }
     });
-  }, [resolvedTheme, mounted, isGlobeMode, showLabels]);
+  }, [resolvedTheme, introAnimationComplete, showLabels]);
 
   // Update label visibility when showLabels changes
   useEffect(() => {
-    if (!map.current || !mounted) return;
+    if (!map.current || !introAnimationComplete) return;
 
     const style = map.current.getStyle();
-    if (style && style.layers) {
-      style.layers.forEach((layer: any) => {
-        if (layer.type === "symbol" && layer.layout && layer.layout["text-field"]) {
+    if (style?.layers) {
+      style.layers.forEach((layer) => {
+        if (
+          layer.type === "symbol" &&
+          layer.layout &&
+          "text-field" in layer.layout
+        ) {
           try {
-            map.current!.setLayoutProperty(layer.id, "visibility", showLabels ? "visible" : "none");
-          } catch (error) {
+            map.current!.setLayoutProperty(
+              layer.id,
+              "visibility",
+              showLabels ? "visible" : "none"
+            );
+          } catch (_error) {
             // Layer might not exist yet
           }
         }
       });
     }
-  }, [showLabels, mounted]);
+  }, [showLabels, introAnimationComplete]);
 
   // Update markers when deployments, filters, or search changes
   useEffect(() => {
-    if (!map.current || !mounted) return;
+    if (!map.current || !showMarkers || isUpdatingMarkers.current) return;
 
-    // Clear existing markers
+    // Set flag to prevent concurrent updates
+    isUpdatingMarkers.current = true;
+
+    // Cancel any ongoing marker creation from previous render
+    markerTimeouts.current.forEach((timeout) => clearTimeout(timeout));
+    markerTimeouts.current = [];
+
+    // Update the current deployments key
+    currentDeploymentsKey.current = deploymentsKey;
+
+    // Clear existing markers AND the elements map for highlighting
     markers.current.forEach((marker) => marker.remove());
     markers.current = [];
+    markerElementsMap.current.clear();
 
-    // Create supercluster index
-    const cluster = new Supercluster<Deployment>({
-      radius: 60,
-      maxZoom: 16,
-      minPoints: 2,
-    });
+    // Create supercluster index only if clustering is enabled
+    const cluster = enableClustering
+      ? new Supercluster<Deployment>({
+          radius: 60,
+          maxZoom: 16,
+          minPoints: 2,
+        })
+      : null;
 
     // Convert deployments to GeoJSON features
-    const features = filteredDeployments.map((deployment) => ({
+    const features = deployments.map((deployment) => ({
       type: "Feature" as const,
       geometry: {
         type: "Point" as const,
-        coordinates: [deployment.location.longitude, deployment.location.latitude],
+        coordinates: [
+          deployment.location.longitude,
+          deployment.location.latitude,
+        ],
       },
       properties: deployment,
     }));
 
-    cluster.load(features);
+    if (cluster) {
+      cluster.load(features);
+    }
 
     const updateMarkers = () => {
       if (!map.current) return;
@@ -193,34 +320,56 @@ export function DeploymentMap({
       const bounds = map.current.getBounds();
       const zoom = map.current.getZoom();
 
-      const clusters = cluster.getClusters(
-        [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()],
-        Math.floor(zoom)
-      );
+      // Get clusters or individual points based on enableClustering
+      const clusters =
+        enableClustering && cluster
+          ? cluster.getClusters(
+              [
+                bounds.getWest(),
+                bounds.getSouth(),
+                bounds.getEast(),
+                bounds.getNorth(),
+              ],
+              Math.floor(zoom)
+            )
+          : features; // If clustering disabled, show all features
 
       // Clear existing markers
       markers.current.forEach((marker) => marker.remove());
       markers.current = [];
 
-      clusters.forEach((cluster) => {
-        const [lng, lat] = cluster.geometry.coordinates;
-        const properties = cluster.properties as any;
+      // Track marker data for batch creation and animation
+      const markerData: Array<{
+        element: HTMLElement;
+        lngLat: [number, number];
+      }> = [];
 
-        if (properties.cluster) {
+      clusters.forEach((clusterPoint) => {
+        const [lng, lat] = clusterPoint.geometry.coordinates;
+        const properties = clusterPoint.properties;
+
+        if (
+          properties &&
+          typeof properties === "object" &&
+          "cluster" in properties
+        ) {
           // This is a cluster
-          const clusterLeaves = properties.point_count || 0;
-          const clusterId = properties.cluster_id;
+          const clusterLeaves =
+            (properties as { point_count?: number }).point_count || 0;
+          const clusterId = (properties as { cluster_id?: number }).cluster_id;
 
           // For simplicity, use first deployment's color
-          const firstDeployment = filteredDeployments[0];
-          const color = firstDeployment ? PROGRAM_COLORS[firstDeployment.program] : "#6B7280";
+          const firstDeployment = deployments[0];
+          const color = firstDeployment
+            ? PROGRAM_COLORS[firstDeployment.program]
+            : "#6B7280";
 
           const el = createClusterMarkerElement(clusterLeaves, color);
 
           el.addEventListener("click", () => {
-            if (map.current && clusterId) {
+            if (map.current && clusterId && cluster) {
               const expansionZoom = Math.min(
-                (cluster as any).getClusterExpansionZoom?.(clusterId) || zoom + 2,
+                cluster.getClusterExpansionZoom?.(clusterId) || zoom + 2,
                 20
               );
               map.current.flyTo({
@@ -230,43 +379,202 @@ export function DeploymentMap({
             }
           });
 
-          const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map.current!);
-          markers.current.push(marker);
+          // If intro animation is not complete, add to animation queue
+          if (!introAnimationComplete) {
+            markerData.push({ element: el, lngLat: [lng, lat] });
+          } else {
+            // Intro complete, add marker directly
+            const marker = new maplibregl.Marker({ element: el })
+              .setLngLat([lng, lat])
+              .addTo(map.current!);
+            markers.current.push(marker);
+          }
         } else {
           // This is a single deployment
           const deployment = properties as Deployment;
           const el = createMarkerElement(deployment.program);
 
+          // Store the element in the map for later highlighting
+          markerElementsMap.current.set(deployment.id, el);
+
           el.addEventListener("click", () => {
             onDeploymentClick?.(deployment);
           });
 
-          const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map.current!);
-          markers.current.push(marker);
+          // If intro animation is not complete, add to animation queue
+          if (!introAnimationComplete) {
+            markerData.push({ element: el, lngLat: [lng, lat] });
+          } else {
+            // Intro complete, add marker directly
+            const marker = new maplibregl.Marker({ element: el })
+              .setLngLat([lng, lat])
+              .addTo(map.current!);
+            markers.current.push(marker);
+          }
         }
       });
+
+      // Animate markers one by one for intro
+      if (!introAnimationComplete && markerData.length > 0) {
+        const renderKey = currentDeploymentsKey.current;
+        markerData.forEach((data, index) => {
+          const timeout = setTimeout(() => {
+            // Check if this render is still valid (deployments haven't changed)
+            if (currentDeploymentsKey.current !== renderKey) {
+              return; // Abort - deployments changed
+            }
+
+            // Set initial state BEFORE adding to map
+            data.element.style.opacity = "0";
+            data.element.style.transform = "scale(0)";
+            data.element.style.transition =
+              "all 1.2s cubic-bezier(0.22, 1, 0.36, 1)";
+            data.element.style.willChange = "transform, opacity";
+            data.element.style.transformOrigin = "center center";
+
+            // Add to map with styles already applied
+            const marker = new maplibregl.Marker({ element: data.element })
+              .setLngLat(data.lngLat)
+              .addTo(map.current!);
+            markers.current.push(marker);
+
+            // Trigger animation after a brief moment
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                data.element.style.opacity = "1";
+                // data.element.style.transform = "scale(1)";
+              });
+            });
+
+            // Set intro complete after the last marker finishes animating
+            // if (index === markerData.length - 1) {
+            //   setTimeout(() => {
+            //     setIntroAnimationComplete(true);
+            //   }, 1250); // Wait for animation to complete
+            // }
+          }, index * 50); // 50ms between each marker
+          markerTimeouts.current.push(timeout);
+        });
+      }
     };
 
     // Initial marker update
     if (map.current.isStyleLoaded()) {
       updateMarkers();
+      isUpdatingMarkers.current = false;
     } else {
-      map.current.once("load", updateMarkers);
+      map.current.once("load", () => {
+        updateMarkers();
+        isUpdatingMarkers.current = false;
+      });
     }
 
-    // Update markers on move
-    map.current.on("moveend", updateMarkers);
-    map.current.on("zoomend", updateMarkers);
+    // Only update markers on move/zoom if clustering is enabled
+    // When clustering is disabled, markers stay fixed and don't need updates
+    if (enableClustering) {
+      const handleMapUpdate = () => {
+        if (introAnimationComplete && !isUpdatingMarkers.current) {
+          isUpdatingMarkers.current = true;
+          updateMarkers();
+          isUpdatingMarkers.current = false;
+        }
+      };
+
+      map.current.on("moveend", handleMapUpdate);
+      map.current.on("zoomend", handleMapUpdate);
+
+      return () => {
+        isUpdatingMarkers.current = false;
+        if (map.current) {
+          map.current.off("moveend", handleMapUpdate);
+          map.current.off("zoomend", handleMapUpdate);
+        }
+      };
+    }
 
     return () => {
-      if (map.current) {
-        map.current.off("moveend", updateMarkers);
-        map.current.off("zoomend", updateMarkers);
-      }
+      isUpdatingMarkers.current = false;
+      // Clear any pending marker creation timeouts
+      markerTimeouts.current.forEach((timeout) => clearTimeout(timeout));
+      markerTimeouts.current = [];
     };
-  }, [filteredDeployments, mounted, onDeploymentClick]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deploymentsKey, showMarkers, introAnimationComplete, enableClustering]);
 
-  return (
-    <div ref={mapContainer} className="h-full w-full" />
-  );
+  // Handle highlighting without re-rendering markers
+  useEffect(() => {
+    if (!introAnimationComplete) return;
+
+    // Reset all marker styles to normal circles
+    markerElementsMap.current.forEach((element) => {
+      // Remove pin if it exists
+      const pinSvg = element.querySelector(".map-pin-overlay");
+      if (pinSvg) {
+        pinSvg.remove();
+      }
+      element.style.transform = "scale(1)";
+      element.style.zIndex = "0";
+      element.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
+      element.style.transition = "transform 0.8s ease, box-shadow 0.5s ease";
+    });
+
+    // Highlight the selected marker with map pin icon overlay
+    if (highlightedDeploymentId) {
+      const element = markerElementsMap.current.get(highlightedDeploymentId);
+      if (element) {
+        // Get the marker color
+        const markerColor = element.style.backgroundColor;
+
+        // Create SVG pin overlay
+        const pinSvg = document.createElement("div");
+        pinSvg.className = "map-pin-overlay";
+        pinSvg.innerHTML = `
+          <svg width="40" height="40" viewBox="0 -1 45 50" style="position: absolute; left: -12px; top: -28px; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));">
+            <path d="M20 0C12.3 0 6 6.3 6 14c0 10.5 14 28 14 28s14-17.5 14-28c0-7.7-6.3-14-14-14zm0 19c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z" 
+                  fill="${markerColor}" 
+                  stroke="white" 
+                  stroke-width="2"/>
+            <circle cx="20" cy="14" r="4" fill="white" opacity="0.9"/>
+          </svg>
+        `;
+
+        element.appendChild(pinSvg);
+        element.style.transform = "scale(1.2)";
+        element.style.zIndex = "100";
+        element.style.transition = "all 0.7s ease";
+      }
+    }
+  }, [highlightedDeploymentId, introAnimationComplete]);
+
+  // Zoom to highlighted deployment or zoom out when deselected
+  useEffect(() => {
+    if (!map.current || !introAnimationComplete) return;
+
+    if (highlightedDeploymentId) {
+      // Zoom in to selected deployment
+      const deployment = deployments.find(
+        (d) => d.id === highlightedDeploymentId
+      );
+      if (deployment) {
+        map.current.flyTo({
+          center: [deployment.location.longitude, deployment.location.latitude],
+          zoom: 10,
+          duration: 1500,
+          essential: true,
+        });
+      }
+    } else {
+      // Zoom out to India view when deselected
+      const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+      map.current.flyTo({
+        center: INDIA_CENTER,
+        zoom: isMobile ? 3.8 : 4.5,
+        duration: 1500,
+        essential: true,
+        easing: (t) => Math.min(1, 100 * t),
+      });
+    }
+  }, [highlightedDeploymentId, deployments, introAnimationComplete]);
+
+  return <div ref={mapContainer} className="h-full w-full" />;
 }

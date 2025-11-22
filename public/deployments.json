@@ -75,26 +75,10 @@
       "status": "active"
     },
     {
-      "id": "10bed-nairobi-001",
-      "name": "Kenyatta National Hospital ICU",
-      "description": "State-of-the-art 10-bed ICU with telemedicine capabilities for remote consultations.",
-      "program": "10bedicu",
-      "location": {
-        "latitude": -1.2921,
-        "longitude": 36.8219,
-        "address": {
-          "city": "Nairobi",
-          "country": "Kenya"
-        }
-      },
-      "dateDeployed": "2024-08-12",
-      "status": "active"
-    },
-    {
       "id": "kerala-calicut-001",
       "name": "Calicut Medical College",
       "description": "Integrated healthcare platform managing outpatient, inpatient, and emergency services across 800 beds.",
-      "program": "kerala-care",
+      "program": "10bedicu",
       "location": {
         "latitude": 11.2588,
         "longitude": 75.7804,
@@ -109,60 +93,10 @@
       "status": "active"
     },
     {
-      "id": "palliative-london-001",
-      "name": "St Christopher's Hospice",
-      "description": "Leading palliative care facility with 48 inpatient beds and home care services for 300+ patients.",
-      "program": "palliative-ngo",
-      "location": {
-        "latitude": 51.4071,
-        "longitude": -0.0692,
-        "address": {
-          "city": "London",
-          "country": "United Kingdom"
-        }
-      },
-      "dateDeployed": "2024-02-28",
-      "website": "https://example.com/london-hospice",
-      "status": "active"
-    },
-    {
-      "id": "hmis-dhaka-001",
-      "name": "Dhaka Medical College Hospital",
-      "description": "Comprehensive HMIS managing 2600 beds, 35 departments with digital health records and analytics.",
-      "program": "hmis",
-      "location": {
-        "latitude": 23.8103,
-        "longitude": 90.4125,
-        "address": {
-          "city": "Dhaka",
-          "country": "Bangladesh"
-        }
-      },
-      "dateDeployed": "2024-04-22",
-      "status": "active"
-    },
-    {
-      "id": "10bed-jakarta-001",
-      "name": "Cipto Mangunkusumo Hospital ICU",
-      "description": "Advanced ICU with 10 beds equipped with latest monitoring technology and ventilator support.",
-      "program": "10bedicu",
-      "location": {
-        "latitude": -6.2088,
-        "longitude": 106.8456,
-        "address": {
-          "city": "Jakarta",
-          "country": "Indonesia"
-        }
-      },
-      "dateDeployed": "2024-07-05",
-      "website": "https://example.com/jakarta-icu",
-      "status": "active"
-    },
-    {
       "id": "kerala-ernakulam-001",
       "name": "Ernakulam General Hospital",
       "description": "Digital healthcare platform managing 600+ beds with telemedicine and mobile health integration.",
-      "program": "kerala-care",
+      "program": "10bedicu",
       "location": {
         "latitude": 9.9816,
         "longitude": 76.2999,
@@ -176,109 +110,10 @@
       "status": "active"
     },
     {
-      "id": "palliative-toronto-001",
-      "name": "Princess Margaret Cancer Centre",
-      "description": "Integrated palliative care program serving 200+ patients with specialized pain management.",
-      "program": "palliative-ngo",
-      "location": {
-        "latitude": 43.6532,
-        "longitude": -79.3832,
-        "address": {
-          "city": "Toronto",
-          "country": "Canada"
-        }
-      },
-      "dateDeployed": "2023-12-10",
-      "website": "https://example.com/toronto-palliative",
-      "status": "active"
-    },
-    {
-      "id": "hmis-kathmandu-001",
-      "name": "Tribhuvan University Teaching Hospital",
-      "description": "HMIS deployment for 700-bed teaching hospital with research integration and student training modules.",
-      "program": "hmis",
-      "location": {
-        "latitude": 27.7172,
-        "longitude": 85.3240,
-        "address": {
-          "city": "Kathmandu",
-          "country": "Nepal"
-        }
-      },
-      "dateDeployed": "2024-03-30",
-      "status": "active"
-    },
-    {
-      "id": "10bed-singapore-001",
-      "name": "Singapore General Hospital ICU",
-      "description": "High-tech 10-bed ICU with AI-assisted monitoring and predictive analytics for patient outcomes.",
-      "program": "10bedicu",
-      "location": {
-        "latitude": 1.3521,
-        "longitude": 103.8198,
-        "address": {
-          "city": "Singapore",
-          "country": "Singapore"
-        }
-      },
-      "dateDeployed": "2024-09-18",
-      "website": "https://example.com/singapore-icu",
-      "status": "active"
-    },
-    {
-      "id": "palliative-melbourne-001",
-      "name": "Sacred Heart Hospice",
-      "description": "Community-based palliative care network serving 150+ patients with home and inpatient services.",
-      "program": "palliative-ngo",
-      "location": {
-        "latitude": -37.8136,
-        "longitude": 144.9631,
-        "address": {
-          "city": "Melbourne",
-          "country": "Australia"
-        }
-      },
-      "dateDeployed": "2024-01-25",
-      "website": "https://example.com/melbourne-hospice",
-      "status": "active"
-    },
-    {
-      "id": "hmis-colombo-001",
-      "name": "National Hospital of Sri Lanka",
-      "description": "Largest HMIS deployment in Sri Lanka managing 3000+ beds with integrated emergency and pharmacy systems.",
-      "program": "hmis",
-      "location": {
-        "latitude": 6.9271,
-        "longitude": 79.8612,
-        "address": {
-          "city": "Colombo",
-          "country": "Sri Lanka"
-        }
-      },
-      "dateDeployed": "2024-02-14",
-      "status": "active"
-    },
-    {
-      "id": "10bed-manila-001",
-      "name": "Philippine General Hospital ICU",
-      "description": "Modern 10-bed ICU facility with advanced life support systems and infection control measures.",
-      "program": "10bedicu",
-      "location": {
-        "latitude": 14.5995,
-        "longitude": 120.9842,
-        "address": {
-          "city": "Manila",
-          "country": "Philippines"
-        }
-      },
-      "dateDeployed": "2024-10-03",
-      "status": "active"
-    },
-    {
       "id": "kerala-thrissur-001",
       "name": "Thrissur District Hospital",
       "description": "Digital health platform connecting primary, secondary, and tertiary care facilities across the district.",
-      "program": "kerala-care",
+      "program": "10bedicu",
       "location": {
         "latitude": 10.5276,
         "longitude": 76.2144,
@@ -292,21 +127,1213 @@
       "status": "active"
     },
     {
-      "id": "palliative-amsterdam-001",
-      "name": "Amsterdam Palliative Care Network",
-      "description": "Collaborative network of 8 facilities providing specialized end-of-life care and family support.",
-      "program": "palliative-ngo",
+      "id": "10bed-delhi-001",
+      "name": "AIIMS Delhi ICU",
+      "description": "Advanced 10-bed ICU with state-of-the-art monitoring and life support systems.",
+      "program": "10bedicu",
       "location": {
-        "latitude": 52.3676,
-        "longitude": 4.9041,
+        "latitude": 28.5672,
+        "longitude": 77.2100,
         "address": {
-          "city": "Amsterdam",
-          "country": "Netherlands"
+          "city": "New Delhi",
+          "state": "Delhi",
+          "country": "India"
         }
       },
-      "dateDeployed": "2023-10-15",
-      "website": "https://example.com/amsterdam-palliative",
+      "dateDeployed": "2024-02-20",
+      "website": "https://example.com/delhi-icu",
       "status": "active"
-    }
+    },
+    {
+      "id": "hmis-chennai-001",
+      "name": "Government General Hospital Chennai",
+      "description": "Comprehensive HMIS managing 2000+ beds with integrated outpatient and emergency departments.",
+      "program": "hmis",
+      "location": {
+        "latitude": 13.0827,
+        "longitude": 80.2707,
+        "address": {
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-05-18",
+      "status": "active"
+    },
+    {
+      "id": "palliative-pune-001",
+      "name": "Pune Palliative Care Network",
+      "description": "Network of 8 centers providing comprehensive end-of-life care and support services.",
+      "program": "palliative-ngo",
+      "location": {
+        "latitude": 18.5204,
+        "longitude": 73.8567,
+        "address": {
+          "city": "Pune",
+          "state": "Maharashtra",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-03-12",
+      "website": "https://example.com/pune-palliative",
+      "status": "active"
+    },
+    {
+      "id": "hmis-hyderabad-001",
+      "name": "Osmania General Hospital",
+      "description": "Large-scale HMIS implementation for 1500-bed hospital with digital health records.",
+      "program": "hmis",
+      "location": {
+        "latitude": 17.3850,
+        "longitude": 78.4867,
+        "address": {
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-07-22",
+      "status": "active"
+    },
+    {
+      "id": "10bed-kolkata-001",
+      "name": "Medical College Kolkata ICU",
+      "description": "Modern 10-bed ICU with advanced ventilator support and monitoring systems.",
+      "program": "10bedicu",
+      "location": {
+        "latitude": 22.5726,
+        "longitude": 88.3639,
+        "address": {
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "country": "India"
+        }
+      },
+      "dateDeployed": "2024-04-15",
+      "status": "active"
+    },
+  {
+    "id": "10bed-karnataka-001",
+    "name": "K R Hospital, Mysore",
+    "description": "Government hospital in Mysore district outfitted with a 10-bed ICU under the 10bedicu programme.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.313092,
+      "longitude": 76.649574,
+      "address": {
+        "city": "Mysore",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-002",
+    "name": "GH Malavalli, Mandya",
+    "description": "Taluka government hospital in Malavalli (Mandya district) under the 10bedicu project.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.38641,
+      "longitude": 77.05895,
+      "address": {
+        "city": "Malavalli",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-003",
+    "name": "GH HD Kote, Mysuru",
+    "description": "Government hospital in H.D. Kote taluk of Mysuru district outfitted with 10-bed ICU.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.29400,
+      "longitude": 76.33000,
+      "address": {
+        "city": "H.D. Kote",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-004",
+    "name": "GH Nanjangud, Mysuru",
+    "description": "Government hospital in Nanjangud (Mysuru district) included in the 10bedicu rollout.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.120000,
+      "longitude": 76.680000,
+      "address": {
+        "city": "Nanjangud",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-005",
+    "name": "GH Gundlupete, Chamarajanagar",
+    "description": "Government hospital in Gundlupete taluk (Chamarajanagar district) under the 10bedicu programme.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.81274,
+      "longitude": 76.70061,
+      "address": {
+        "city": "Gundlupete",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-006",
+    "name": "GH Sira, Tumakuru",
+    "description": "Government hospital in Sira (Tumakuru district) under the 10bedicu programme.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.74855,
+      "longitude": 76.91028,
+      "address": {
+        "city": "Sira",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-007",
+    "name": "GH Virajpet, Kodagu",
+    "description": "Government hospital in Virajpet (Kodagu district) included in the 10bedicu rollout.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.200564,
+      "longitude": 75.804002,
+      "address": {
+        "city": "Virajpet",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-008",
+    "name": "GH Challakere, Chitradurga",
+    "description": "Government hospital in Challakere (Chitradurga district) under 10bedicu project.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.31200,
+      "longitude": 76.65100,
+      "address": {
+        "city": "Challakere",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-009",
+    "name": "GH Basavakalyan, Bidar",
+    "description": "Government hospital in Basavakalyan (Bidar district) part of the 10bedicu rollout.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.9860,
+      "longitude": 77.1270,
+      "address": {
+        "city": "Basavakalyan",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-010",
+    "name": "GH Raichur, Raichur",
+    "description": "Government hospital in Raichur district outfitted with a 10-bed ICU under the 10bedicu programme.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.2066,
+      "longitude": 77.3455,
+      "address": {
+        "city": "Raichur",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-rajasthan-001",
+    "name": "SMS Hospital ICU, Jaipur",
+    "description": "10-bed ICU facility at Sawai Man Singh Hospital with advanced critical care infrastructure.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "address": {
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-gujarat-001",
+    "name": "Civil Hospital ICU, Ahmedabad",
+    "description": "Modern 10-bed ICU with ventilator support and patient monitoring systems.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.0225,
+      "longitude": 72.5714,
+      "address": {
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-20",
+    "status": "active"
+  },
+  {
+    "id": "10bed-madhyapradesh-001",
+    "name": "Hamidia Hospital ICU, Bhopal",
+    "description": "10-bed ICU equipped with state-of-the-art life support and monitoring equipment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.2599,
+      "longitude": 77.4126,
+      "address": {
+        "city": "Bhopal",
+        "state": "Madhya Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-10",
+    "status": "active"
+  },
+  {
+    "id": "10bed-uttarpradesh-001",
+    "name": "King George Medical University ICU, Lucknow",
+    "description": "Advanced 10-bed ICU with comprehensive critical care facilities.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.8467,
+      "longitude": 80.9462,
+      "address": {
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-06-25",
+    "status": "active"
+  },
+  {
+    "id": "10bed-odisha-001",
+    "name": "SCB Medical College ICU, Cuttack",
+    "description": "10-bed ICU at Sriram Chandra Bhanj Medical College with modern healthcare technology.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 20.5020,
+      "longitude": 85.8830,
+      "address": {
+        "city": "Cuttack",
+        "state": "Odisha",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-punjab-001",
+    "name": "Government Medical College ICU, Amritsar",
+    "description": "10-bed ICU providing critical care services with advanced monitoring systems.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 31.6340,
+      "longitude": 74.8723,
+      "address": {
+        "city": "Amritsar",
+        "state": "Punjab",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-001",
+    "name": "Gauhati Medical College ICU, Guwahati",
+    "description": "10-bed ICU facility equipped with ventilators and comprehensive life support.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.1445,
+      "longitude": 91.7362,
+      "address": {
+        "city": "Guwahati",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-22",
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-001",
+    "name": "Rajendra Institute ICU, Ranchi",
+    "description": "10-bed ICU at RIMS with advanced critical care infrastructure and monitoring.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.3441,
+      "longitude": 85.3096,
+      "address": {
+        "city": "Ranchi",
+        "state": "Jharkhand",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-uttarakhand-001",
+    "name": "AIIMS Rishikesh ICU",
+    "description": "10-bed ICU at AIIMS Rishikesh with comprehensive critical care facilities.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 30.0668,
+      "longitude": 78.2905,
+      "address": {
+        "city": "Rishikesh",
+        "state": "Uttarakhand",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-chhattisgarh-001",
+    "name": "Dr. Bhimrao Ambedkar Memorial Hospital ICU, Raipur",
+    "description": "10-bed ICU with modern ventilator support and patient monitoring systems.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 21.2514,
+      "longitude": 81.6296,
+      "address": {
+        "city": "Raipur",
+        "state": "Chhattisgarh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-30",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-011",
+    "name": "District Hospital, Tumakuru",
+    "description": "10-bed ICU facility serving Tumakuru district with advanced critical care.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.3392,
+      "longitude": 77.1006,
+      "address": {
+        "city": "Tumakuru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-012",
+    "name": "GH Chikkamagaluru",
+    "description": "Government hospital ICU with 10 beds serving Chikkamagaluru district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.3161,
+      "longitude": 75.7720,
+      "address": {
+        "city": "Chikkamagaluru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-013",
+    "name": "GH Hassan",
+    "description": "10-bed ICU at Hassan District Hospital with comprehensive critical care.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.0072,
+      "longitude": 76.0962,
+      "address": {
+        "city": "Hassan",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-22",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-014",
+    "name": "GH Mandya",
+    "description": "District hospital ICU in Mandya with modern monitoring and ventilator systems.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.5244,
+      "longitude": 76.8958,
+      "address": {
+        "city": "Mandya",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-015",
+    "name": "GH Dharwad",
+    "description": "10-bed ICU facility at Dharwad District Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.4589,
+      "longitude": 75.0078,
+      "address": {
+        "city": "Dharwad",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-016",
+    "name": "GH Belgaum",
+    "description": "Critical care unit with 10 beds at Belgaum Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.8497,
+      "longitude": 74.4977,
+      "address": {
+        "city": "Belgaum",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-30",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-017",
+    "name": "GH Bellary",
+    "description": "10-bed ICU at Bellary District Hospital with advanced life support.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.1394,
+      "longitude": 76.9214,
+      "address": {
+        "city": "Bellary",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-08",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-018",
+    "name": "GH Udupi",
+    "description": "Coastal district hospital ICU with 10-bed capacity and modern equipment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.3409,
+      "longitude": 74.7421,
+      "address": {
+        "city": "Udupi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-25",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-019",
+    "name": "GH Mangalore",
+    "description": "10-bed ICU at Mangalore Government Hospital serving coastal Karnataka.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.9141,
+      "longitude": 74.8560,
+      "address": {
+        "city": "Mangalore",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-020",
+    "name": "GH Shimoga",
+    "description": "District hospital ICU facility with 10 beds in Shimoga.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.9299,
+      "longitude": 75.5681,
+      "address": {
+        "city": "Shimoga",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-16",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-001",
+    "name": "Government Hospital ICU, Coimbatore",
+    "description": "10-bed ICU at Coimbatore Medical College Hospital with advanced critical care.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.0168,
+      "longitude": 76.9558,
+      "address": {
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-002",
+    "name": "Government Hospital ICU, Madurai",
+    "description": "10-bed critical care unit at Madurai Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 9.9252,
+      "longitude": 78.1198,
+      "address": {
+        "city": "Madurai",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-20",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-003",
+    "name": "Government Hospital ICU, Tiruchirappalli",
+    "description": "10-bed ICU facility at Trichy Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.7905,
+      "longitude": 78.7047,
+      "address": {
+        "city": "Tiruchirappalli",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-08",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-004",
+    "name": "Government Hospital ICU, Salem",
+    "description": "10-bed ICU with modern ventilator support at Salem GH.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.6643,
+      "longitude": 78.1460,
+      "address": {
+        "city": "Salem",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-25",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-005",
+    "name": "Government Hospital ICU, Tirunelveli",
+    "description": "Critical care facility with 10 beds at Tirunelveli Medical College.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 8.7139,
+      "longitude": 77.7567,
+      "address": {
+        "city": "Tirunelveli",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-006",
+    "name": "Government Hospital ICU, Vellore",
+    "description": "10-bed ICU at Vellore Government Medical College Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.9165,
+      "longitude": 79.1325,
+      "address": {
+        "city": "Vellore",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-02",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-007",
+    "name": "Government Hospital ICU, Thanjavur",
+    "description": "10-bed critical care unit serving Thanjavur district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.7870,
+      "longitude": 79.1378,
+      "address": {
+        "city": "Thanjavur",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-008",
+    "name": "Government Hospital ICU, Erode",
+    "description": "10-bed ICU facility at Erode Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.3410,
+      "longitude": 77.7172,
+      "address": {
+        "city": "Erode",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-009",
+    "name": "Government Hospital ICU, Dindigul",
+    "description": "District hospital ICU with 10 beds and advanced monitoring.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.3673,
+      "longitude": 77.9803,
+      "address": {
+        "city": "Dindigul",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-tamilnadu-010",
+    "name": "Government Hospital ICU, Karur",
+    "description": "10-bed ICU at Karur District Hospital with modern equipment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.9601,
+      "longitude": 78.0766,
+      "address": {
+        "city": "Karur",
+        "state": "Tamil Nadu",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-001",
+    "name": "District Hospital ICU, Kollam",
+    "description": "10-bed ICU facility at Kollam District Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 8.8932,
+      "longitude": 76.6141,
+      "address": {
+        "city": "Kollam",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-002",
+    "name": "District Hospital ICU, Alappuzha",
+    "description": "Critical care unit with 10 beds at Alappuzha Medical College.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 9.4981,
+      "longitude": 76.3388,
+      "address": {
+        "city": "Alappuzha",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-003",
+    "name": "District Hospital ICU, Kannur",
+    "description": "10-bed ICU at Kannur District Hospital with advanced life support.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.8745,
+      "longitude": 75.3704,
+      "address": {
+        "city": "Kannur",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-20",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-004",
+    "name": "District Hospital ICU, Kasaragod",
+    "description": "10-bed ICU facility serving Kasaragod district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.4996,
+      "longitude": 74.9869,
+      "address": {
+        "city": "Kasaragod",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-10",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-005",
+    "name": "District Hospital ICU, Palakkad",
+    "description": "10-bed critical care unit at Palakkad District Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.7867,
+      "longitude": 76.6548,
+      "address": {
+        "city": "Palakkad",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-006",
+    "name": "District Hospital ICU, Malappuram",
+    "description": "10-bed ICU at Malappuram District Hospital with modern equipment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.0510,
+      "longitude": 76.0711,
+      "address": {
+        "city": "Malappuram",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-007",
+    "name": "District Hospital ICU, Pathanamthitta",
+    "description": "Critical care facility with 10 beds in Pathanamthitta.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 9.2648,
+      "longitude": 76.7870,
+      "address": {
+        "city": "Pathanamthitta",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-22",
+    "status": "active"
+  },
+  {
+    "id": "10bed-kerala-008",
+    "name": "District Hospital ICU, Idukki",
+    "description": "10-bed ICU serving the hilly district of Idukki.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 9.9189,
+      "longitude": 77.1025,
+      "address": {
+        "city": "Idukki",
+        "state": "Kerala",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-telangana-001",
+    "name": "Gandhi Hospital ICU, Hyderabad",
+    "description": "10-bed ICU at Gandhi Hospital with comprehensive critical care.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.4506,
+      "longitude": 78.4772,
+      "address": {
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-telangana-002",
+    "name": "District Hospital ICU, Warangal",
+    "description": "10-bed critical care unit at Warangal MGM Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.9784,
+      "longitude": 79.5941,
+      "address": {
+        "city": "Warangal",
+        "state": "Telangana",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-25",
+    "status": "active"
+  },
+  {
+    "id": "10bed-telangana-003",
+    "name": "District Hospital ICU, Karimnagar",
+    "description": "10-bed ICU facility at Karimnagar District Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 18.4386,
+      "longitude": 79.1288,
+      "address": {
+        "city": "Karimnagar",
+        "state": "Telangana",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-22",
+    "status": "active"
+  },
+  {
+    "id": "10bed-telangana-004",
+    "name": "District Hospital ICU, Nizamabad",
+    "description": "10-bed ICU with advanced monitoring at Nizamabad GH.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 18.6725,
+      "longitude": 78.0941,
+      "address": {
+        "city": "Nizamabad",
+        "state": "Telangana",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-telangana-005",
+    "name": "District Hospital ICU, Khammam",
+    "description": "Critical care unit with 10 beds at Khammam District Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.2473,
+      "longitude": 80.1514,
+      "address": {
+        "city": "Khammam",
+        "state": "Telangana",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-08",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-001",
+    "name": "Government Hospital ICU, Visakhapatnam",
+    "description": "10-bed ICU at King George Hospital, Visakhapatnam.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.6869,
+      "longitude": 83.2185,
+      "address": {
+        "city": "Visakhapatnam",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-002",
+    "name": "Government Hospital ICU, Vijayawada",
+    "description": "10-bed critical care facility at Vijayawada Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.5062,
+      "longitude": 80.6480,
+      "address": {
+        "city": "Vijayawada",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-003",
+    "name": "Government Hospital ICU, Guntur",
+    "description": "10-bed ICU at Guntur General Hospital with modern equipment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.3067,
+      "longitude": 80.4365,
+      "address": {
+        "city": "Guntur",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-004",
+    "name": "Government Hospital ICU, Tirupati",
+    "description": "10-bed ICU facility at SVIMS Tirupati serving pilgrims and locals.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.6288,
+      "longitude": 79.4192,
+      "address": {
+        "city": "Tirupati",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-30",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-005",
+    "name": "Government Hospital ICU, Kakinada",
+    "description": "10-bed critical care unit at Kakinada Government Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.9891,
+      "longitude": 82.2475,
+      "address": {
+        "city": "Kakinada",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-18",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-006",
+    "name": "Government Hospital ICU, Nellore",
+    "description": "10-bed ICU at Nellore District Hospital with advanced care.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.4426,
+      "longitude": 79.9865,
+      "address": {
+        "city": "Nellore",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-22",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-007",
+    "name": "Government Hospital ICU, Anantapur",
+    "description": "Critical care facility with 10 beds at Anantapur GH.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.6819,
+      "longitude": 77.6006,
+      "address": {
+        "city": "Anantapur",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-10",
+    "status": "active"
+  },
+  {
+    "id": "10bed-andhrapradesh-008",
+    "name": "Government Hospital ICU, Kurnool",
+    "description": "10-bed ICU facility at Kurnool Government Medical College.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.8281,
+      "longitude": 78.0373,
+      "address": {
+        "city": "Kurnool",
+        "state": "Andhra Pradesh",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-07-12",
+    "status": "active"
+  },
+  {
+    "id": "10bed-pondicherry-001",
+    "name": "JIPMER ICU, Puducherry",
+    "description": "10-bed ICU at JIPMER with state-of-the-art critical care technology.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.9416,
+      "longitude": 79.8083,
+      "address": {
+        "city": "Puducherry",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-20",
+    "status": "active"
+  },
+  {
+    "id": "10bed-goa-001",
+    "name": "Goa Medical College ICU, Bambolim",
+    "description": "10-bed critical care unit at Goa Medical College Hospital.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.4909,
+      "longitude": 73.8278,
+      "address": {
+        "city": "Panaji",
+        "state": "Goa",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-maharashtra-001",
+    "name": "Government Hospital ICU, Nagpur",
+    "description": "10-bed ICU at Government Medical College, Nagpur.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 21.1458,
+      "longitude": 79.0882,
+      "address": {
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-08-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-maharashtra-002",
+    "name": "Government Hospital ICU, Aurangabad",
+    "description": "10-bed critical care facility at Government Medical College, Aurangabad.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 19.8762,
+      "longitude": 75.3433,
+      "address": {
+        "city": "Aurangabad",
+        "state": "Maharashtra",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-09-08",
+    "status": "active"
+  },
+  {
+    "id": "10bed-maharashtra-003",
+    "name": "Government Hospital ICU, Nashik",
+    "description": "10-bed ICU at Nashik Civil Hospital with advanced monitoring.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 19.9975,
+      "longitude": 73.7898,
+      "address": {
+        "city": "Nashik",
+        "state": "Maharashtra",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-10-12",
+    "status": "active"
+  }
   ]
 }

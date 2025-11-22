@@ -24,17 +24,20 @@ export const PROGRAM_LABELS: Record<ProgramType, string> = {
 /**
  * Create a marker element for the map
  */
-export function createMarkerElement(program: ProgramType, isCluster = false): HTMLDivElement {
+export function createMarkerElement(
+  program: ProgramType,
+  isCluster = false
+): HTMLDivElement {
   const el = document.createElement("div");
   el.className = isCluster ? "cluster-marker" : "deployment-marker";
-  el.style.width = isCluster ? "50px" : "30px";
-  el.style.height = isCluster ? "50px" : "30px";
+  el.style.width = isCluster ? "30px" : "16px";
+  el.style.height = isCluster ? "30px" : "16px";
   el.style.borderRadius = "50%";
   el.style.backgroundColor = PROGRAM_COLORS[program];
-  el.style.border = "3px solid white";
+  el.style.border = "2px solid white";
   el.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
   el.style.cursor = "pointer";
-  el.style.transition = "transform 0.2s";
+  // Removed transition to prevent visual "popping" during map movement
 
   return el;
 }
@@ -42,14 +45,17 @@ export function createMarkerElement(program: ProgramType, isCluster = false): HT
 /**
  * Create a cluster marker element
  */
-export function createClusterMarkerElement(count: number, color: string): HTMLDivElement {
+export function createClusterMarkerElement(
+  count: number,
+  color: string
+): HTMLDivElement {
   const el = document.createElement("div");
   el.className = "cluster-marker";
-  el.style.width = "50px";
-  el.style.height = "50px";
+  el.style.width = "40px";
+  el.style.height = "40px";
   el.style.borderRadius = "50%";
   el.style.backgroundColor = color;
-  el.style.border = "3px solid white";
+  el.style.border = "2px solid white";
   el.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
   el.style.cursor = "pointer";
   el.style.display = "flex";
@@ -57,8 +63,8 @@ export function createClusterMarkerElement(count: number, color: string): HTMLDi
   el.style.justifyContent = "center";
   el.style.color = "white";
   el.style.fontWeight = "bold";
-  el.style.fontSize = "14px";
-  el.style.transition = "transform 0.2s";
+  el.style.fontSize = "12px";
+  // Removed transition to prevent visual "popping" during map movement
 
   el.textContent = count.toString();
 

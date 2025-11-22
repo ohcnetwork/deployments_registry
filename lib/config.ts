@@ -23,7 +23,7 @@ function getEnvVar(key: string, defaultValue: string): string {
 export const config: AppConfig = {
   maptilerApiKey:
     getEnvVar("NEXT_PUBLIC_MAPTILER_API_KEY", "rodPTx1wphnt4LwxwOyQ"),
-  appName: getEnvVar("NEXT_PUBLIC_APP_NAME", "Deployments Registry"),
+  appName: getEnvVar("NEXT_PUBLIC_APP_NAME", "Care Deployments Registry"),
   appDescription: getEnvVar(
     "NEXT_PUBLIC_APP_DESCRIPTION",
     "Global registry of deployments on an interactive map"

@@ -1,11 +1,21 @@
 import type { DeploymentData } from "@/types/deployment";
 import deploymentsJson from "@/public/deployments.json";
 
+// Cache the deployment data to avoid re-parsing JSON on every call
+let cachedDeploymentData: DeploymentData | null = null;
+
 /**
- * Load deployment data from static JSON file
+ * Load deployment data from static JSON file with caching
  */
 export function getDeployments(): DeploymentData {
-  return deploymentsJson as DeploymentData;
+  // Return cached data if available
+  if (cachedDeploymentData) {
+    return cachedDeploymentData;
+  }
+
+  // Parse and cache the data
+  cachedDeploymentData = deploymentsJson as DeploymentData;
+  return cachedDeploymentData;
 }
 
 /**
