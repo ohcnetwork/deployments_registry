@@ -106,6 +106,8 @@ export default function Home() {
   const handleDeploymentClick = (deployment: Deployment) => {
     setSelectedDeployment(deployment);
     setHighlightedDeploymentId(deployment.id);
+    // Close mobile filter sheet when a deployment is selected
+    setIsFilterOpen(false);
   };
 
   const handleClosePopup = () => {

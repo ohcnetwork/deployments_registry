@@ -42,6 +42,8 @@ export function DeploymentMap({
   const isUpdatingMarkers = useRef(false);
   const markerTimeouts = useRef<NodeJS.Timeout[]>([]);
   const currentDeploymentsKey = useRef<string>("");
+  const previousHighlightedId = useRef<string | null>(null);
+  const isIntroAnimating = useRef(false);
 
   // Create a stable key to reliably detect deployment changes
   const deploymentsKey = deployments
@@ -53,6 +55,7 @@ export function DeploymentMap({
   const startIntroAnimation = () => {
     if (!map.current) return;
 
+    isIntroAnimating.current = true;
     const startTime = Date.now();
     const spinDuration = 3000; // 2.5 seconds for smoother animation
     const startZoom = 1.5;
@@ -71,7 +74,8 @@ export function DeploymentMap({
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / spinDuration, 1); // 0 to 1
 
-      // Custom smooth easing function (cubic ease-in-out for buttery smooth motion)
+      // Ultra-smooth quintic ease-in-out for buttery motion
+      // This provides gentler acceleration and deceleration than cubic
       const easeProgress =
         progress < 0.5
           ? 4 * progress * progress * progress
@@ -85,7 +89,7 @@ export function DeploymentMap({
       const currentLng = startLng + 360 * easeProgress;
       const currentLat = startLat;
 
-      // Update map with animation options for smooth rendering
+      // Update map with smooth rendering options
       map.current.jumpTo({
         center: [currentLng, currentLat],
         zoom: currentZoom,
@@ -95,13 +99,16 @@ export function DeploymentMap({
         animationFrameRef.current = requestAnimationFrame(rotateAndZoom);
       } else {
         // Animation complete - we're already at India!
+        // Ensure final position is exact
+        map.current.jumpTo({
+          center: INDIA_CENTER,
+          zoom: endZoom,
+        });
+        isIntroAnimating.current = false;
         // Show markers
         setTimeout(() => {
           setShowMarkers(true);
-          // Set intro complete after a delay so highlighting works
-          setTimeout(() => {
-            setIntroAnimationComplete(true);
-          }, 1000);
+          // Note: introAnimationComplete will be set after the last marker finishes animating
         }, 200);
       }
     };
@@ -271,7 +278,13 @@ export function DeploymentMap({
 
   // Update markers when deployments, filters, or search changes
   useEffect(() => {
-    if (!map.current || !showMarkers || isUpdatingMarkers.current) return;
+    if (
+      !map.current ||
+      !showMarkers ||
+      isUpdatingMarkers.current ||
+      isIntroAnimating.current
+    )
+      return;
 
     // Set flag to prevent concurrent updates
     isUpdatingMarkers.current = true;
@@ -439,22 +452,27 @@ export function DeploymentMap({
             markers.current.push(marker);
 
             // Trigger animation after a brief moment
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => {
-                data.element.style.opacity = "1";
-                // data.element.style.transform = "scale(1)";
-              });
-            });
+            // requestAnimationFrame(() => {
+            //   requestAnimationFrame(() => {
+            //     data.element.style.opacity = "1";
+            //     // data.element.style.transform = "scale(1)";
+            //   });
+            // });
 
             // Set intro complete after the last marker finishes animating
-            // if (index === markerData.length - 1) {
-            //   setTimeout(() => {
-            //     setIntroAnimationComplete(true);
-            //   }, 1250); // Wait for animation to complete
-            // }
-          }, index * 50); // 50ms between each marker
+            if (index === markerData.length - 1) {
+              setTimeout(() => {
+                setIntroAnimationComplete(true);
+              }, 800); // Wait for animation to complete (0.8s transition)
+            }
+          }, index * 30); // 30ms between each marker for smoother cascade
           markerTimeouts.current.push(timeout);
         });
+      } else if (!introAnimationComplete && markerData.length === 0) {
+        // No markers to animate, set intro complete immediately
+        setTimeout(() => {
+          setIntroAnimationComplete(true);
+        }, 1500);
       }
     };
 
@@ -473,7 +491,11 @@ export function DeploymentMap({
     // When clustering is disabled, markers stay fixed and don't need updates
     if (enableClustering) {
       const handleMapUpdate = () => {
-        if (introAnimationComplete && !isUpdatingMarkers.current) {
+        if (
+          introAnimationComplete &&
+          !isUpdatingMarkers.current &&
+          !isIntroAnimating.current
+        ) {
           isUpdatingMarkers.current = true;
           updateMarkers();
           isUpdatingMarkers.current = false;
@@ -563,8 +585,10 @@ export function DeploymentMap({
           essential: true,
         });
       }
-    } else {
-      // Zoom out to India view when deselected
+      previousHighlightedId.current = highlightedDeploymentId;
+    } else if (previousHighlightedId.current !== null) {
+      // Only zoom out if we're actively deselecting (had a highlighted deployment before)
+      // This prevents the double animation on initial load
       const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
       map.current.flyTo({
         center: INDIA_CENTER,
@@ -573,6 +597,7 @@ export function DeploymentMap({
         essential: true,
         easing: (t) => Math.min(1, 100 * t),
       });
+      previousHighlightedId.current = null;
     }
   }, [highlightedDeploymentId, deployments, introAnimationComplete]);
 
