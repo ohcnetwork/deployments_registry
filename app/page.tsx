@@ -20,7 +20,6 @@ import type {
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import logo from "../public/Open_Healthcrae_Network-light-logo.svg";
 
 const ALL_PROGRAMS: ProgramType[] = [
   "10bedicu",
@@ -46,7 +45,9 @@ export default function Home() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
   const [showLabels, setShowLabels] = useState(false);
-  const [enableClustering, setEnableClustering] = useState(false);
+  const [enableClustering, setEnableClustering] = useState(
+    config.enableClusteringByDefault
+  );
 
   // Debounce search input - only update searchQuery after 400ms of no typing
   // Exception: Clear search immediately when input is empty (0ms delay)
@@ -147,13 +148,17 @@ export default function Home() {
         <div className="container flex h-14 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <Image
-              src={logo}
-              alt="Open Healthcare Network"
+              src={config.organizationLogo}
+              alt={config.organizationName}
+              width={80}
+              height={32}
               className="hidden h-8 w-20 dark:block"
             />
             <Image
-              src={logo}
-              alt="Open Healthcare Network"
+              src={config.organizationLogo}
+              alt={config.organizationName}
+              width={80}
+              height={32}
               className="h-8 w-20 dark:hidden"
               style={{ filter: "invert(1) brightness(1.5)" }}
             />

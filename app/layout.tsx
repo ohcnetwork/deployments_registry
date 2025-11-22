@@ -23,13 +23,14 @@ export const metadata: Metadata = {
     description: config.appDescription,
     type: "website",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-    viewportFit: "auto", // For safe area on iOS
-  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "auto", // For safe area on iOS
 };
 
 export default function RootLayout({

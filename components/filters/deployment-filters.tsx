@@ -128,7 +128,7 @@ export function DeploymentFilters({
                       />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between gap-2">
-                          <h4 className="text-sm font-medium line-clamp-1">
+                          <h4 className="text-sm font-medium">
                             {deployment.name}
                           </h4>
                           <Badge

@@ -390,6 +390,9 @@ export function DeploymentMap({
                 zoom: expansionZoom,
               });
             }
+            if (!introAnimationComplete) {
+              setIntroAnimationComplete(true);
+            }
           });
 
           // If intro animation is not complete, add to animation queue
@@ -412,6 +415,9 @@ export function DeploymentMap({
 
           el.addEventListener("click", () => {
             onDeploymentClick?.(deployment);
+            if (!introAnimationComplete) {
+              setIntroAnimationComplete(true);
+            }
           });
 
           // If intro animation is not complete, add to animation queue
@@ -459,12 +465,8 @@ export function DeploymentMap({
             //   });
             // });
 
-            // Set intro complete after the last marker finishes animating
-            if (index === markerData.length - 1) {
-              setTimeout(() => {
-                setIntroAnimationComplete(true);
-              }, 800); // Wait for animation to complete (0.8s transition)
-            }
+            // Previously we auto-completed intro after last marker. Now we wait for user interaction.
+            // Intro will finish when user clicks any marker or cluster.
           }, index * 30); // 30ms between each marker for smoother cascade
           markerTimeouts.current.push(timeout);
         });
@@ -551,7 +553,7 @@ export function DeploymentMap({
         const pinSvg = document.createElement("div");
         pinSvg.className = "map-pin-overlay";
         pinSvg.innerHTML = `
-          <svg width="40" height="40" viewBox="0 -1 45 50" style="position: absolute; left: -12px; top: -28px; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));">
+          <svg width="40" height="40" viewBox="0 -1 45 50" style="position: absolute; left: -11px; top: -28px; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));">
             <path d="M20 0C12.3 0 6 6.3 6 14c0 10.5 14 28 14 28s14-17.5 14-28c0-7.7-6.3-14-14-14zm0 19c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z" 
                   fill="${markerColor}" 
                   stroke="white" 
@@ -600,6 +602,13 @@ export function DeploymentMap({
       previousHighlightedId.current = null;
     }
   }, [highlightedDeploymentId, deployments, introAnimationComplete]);
+
+  // If user selects a location from outside (sheet) before intro completes, finish intro immediately
+  useEffect(() => {
+    if (!introAnimationComplete && highlightedDeploymentId) {
+      setIntroAnimationComplete(true);
+    }
+  }, [highlightedDeploymentId, introAnimationComplete]);
 
   return <div ref={mapContainer} className="h-full w-full" />;
 }

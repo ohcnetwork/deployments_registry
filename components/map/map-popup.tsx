@@ -20,7 +20,7 @@ interface MapPopupProps {
 
 export function MapPopup({ deployment }: MapPopupProps) {
   return (
-    <Card className="w-full max-w-md border-2 py-4 gap-2">
+    <Card className="w-full max-w-md min-w-60 border-2 py-4 gap-2">
       <CardHeader className="pb-0">
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1">
@@ -54,7 +54,7 @@ export function MapPopup({ deployment }: MapPopupProps) {
         </div>
       </CardHeader>
       <CardContent className="space-y-1">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground line-clamp-3 md:line-clamp-none">
           {deployment.description}
         </p>
 

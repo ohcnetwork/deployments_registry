@@ -34,7 +34,7 @@ export function createMarkerElement(
   el.style.height = isCluster ? "30px" : "16px";
   el.style.borderRadius = "50%";
   el.style.backgroundColor = PROGRAM_COLORS[program];
-  el.style.border = "2px solid white";
+  el.style.border = "1px solid white";
   el.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
   el.style.cursor = "pointer";
   // Removed transition to prevent visual "popping" during map movement
