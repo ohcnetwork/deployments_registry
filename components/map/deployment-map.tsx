@@ -105,11 +105,11 @@ export function DeploymentMap({
           zoom: endZoom,
         });
         isIntroAnimating.current = false;
-        // Show markers
+        // Wait a bit longer to ensure rotation is fully complete before showing markers
         setTimeout(() => {
           setShowMarkers(true);
           // Note: introAnimationComplete will be set after the last marker finishes animating
-        }, 200);
+        }, 500);
       }
     };
 
@@ -301,8 +301,9 @@ export function DeploymentMap({
     markers.current = [];
     markerElementsMap.current.clear();
 
-    // Create supercluster index only if clustering is enabled
-    const cluster = enableClustering
+    // Create supercluster index only if clustering is enabled AND intro animation is complete
+    // During intro, we want to show all individual markers for the animation effect
+    const cluster = enableClustering && introAnimationComplete
       ? new Supercluster<Deployment>({
           radius: 60,
           maxZoom: 16,
@@ -333,9 +334,10 @@ export function DeploymentMap({
       const bounds = map.current.getBounds();
       const zoom = map.current.getZoom();
 
-      // Get clusters or individual points based on enableClustering
+      // Get clusters or individual points based on enableClustering and intro state
+      // During intro animation, always show individual markers for animation effect
       const clusters =
-        enableClustering && cluster
+        enableClustering && cluster && introAnimationComplete
           ? cluster.getClusters(
               [
                 bounds.getWest(),
@@ -345,7 +347,7 @@ export function DeploymentMap({
               ],
               Math.floor(zoom)
             )
-          : features; // If clustering disabled, show all features
+          : features; // If clustering disabled or intro not complete, show all features
 
       // Clear existing markers
       markers.current.forEach((marker) => marker.remove());
@@ -456,14 +458,6 @@ export function DeploymentMap({
               .setLngLat(data.lngLat)
               .addTo(map.current!);
             markers.current.push(marker);
-
-            // Trigger animation after a brief moment
-            // requestAnimationFrame(() => {
-            //   requestAnimationFrame(() => {
-            //     data.element.style.opacity = "1";
-            //     // data.element.style.transform = "scale(1)";
-            //   });
-            // });
 
             // Previously we auto-completed intro after last marker. Now we wait for user interaction.
             // Intro will finish when user clicks any marker or cluster.
