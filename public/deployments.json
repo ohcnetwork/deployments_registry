@@ -1,0 +1,2318 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-22T00:00:00Z",
+  "deployments": [
+  {
+    "id": "10bed-manipur-001",
+    "name": "DH,Churachandpur",
+    "description": "The district of Churachandpur derives its name from the town of Churachandpur after Sir Churachand Singh, the Maharaja of Manipur and occupies the south-west part of Manipur state.It is the largest district of Manipur in terms of area.Surrounded by small hills and narrow valleys.Churachandpur which is locally called Lamka, has a deep historical significance. Located at a distance of approx 63 km from the capital of the state, Imphal, Churachandpur is believed to have witnessed a lot of bombing when the Japanese entered India. The district is bounded on the north by Tamenglong District, on the east by the districts of Imphal and Chandel, on the south by Myanmar (Burma) and Mizoram and on the west by the State of Mizoram and Assam. The topography of the district is hilly. The region became the home of more than 30 ethnic groups at historical time, with varying responses to the changing geo-cultural environment.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.343204,
+      "longitude": 93.693083,
+      "address": {
+        "city": "Churchandpur",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-07",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-002",
+    "name": "District Hospital,Tamenglong",
+    "description": "Tamenglong is located in western Manipur lying on the hilltop\n from which descends the Barak River. It is 160 km west of Imphal,\n Manipur's capital city and the rainiest hill station of Manipur. \nThe topography of the district is generally hilly with steep slopes \nwith a small valley.Tamenglong has a topography of irregular \nundulation with turbulent rivers, waterfalls, caves, lakes, and\ndense tropical forests covering the land. The Tamenglong District\n is dominated by different communities like Rongmei, Zemei, \nLiangmei, Inpui, Hmar, Kuki, Chiru, Khasi, Mirki, Paite and \nGangte etc. All of them belong to the Scheduled tribe.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.985429,
+      "longitude": 93.502517,
+      "address": {
+        "city": "Tamenglong",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-06",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-003",
+    "name": "District Hospital,Bishnupur",
+    "description": "Bishnupur is 27 Kms away from Imphal. Bishnupur derived its name from an ancient Vishnu temple located in the town which was established in 15th Century. Bishnupur is home to the dancing deer—sangai. It is the only place where this rare breed of deer can be found in the world today.Loktak Lake is the largest freshwater lake in India is located at Moirang. Bishnupur was one of the sites of the World War II where fierce fighting between the Allied Forces and the Japanese Forces took place. The Indian National Army hoisted the Tricolour for the first time on Indian soil on 14 April 1944, in Moirang . Meities constitute the najority population in the district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.631887,
+      "longitude": 93.761928,
+      "address": {
+        "city": "Bishnupur",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-004",
+    "name": "District Hospital,Chandel",
+    "description": "The District lies in the south-eastern part of Manipur\n and its  about 64 Km away from Imphal. About 20 \ntribal communities have been living in Chandel for\n generations. Some of the prominent tribes are Mayon,\n Anal, Maring, Kukis, Paite, Chothe and Thadou.    \nYangoupokpi-Lokchao Wildlife Sanctuary is located\n in Chandel District along the Indo-Myanmar Border. \nThis is Sanctuary is a treasure trove for lovers of \nwildlife and has a wide variety of species are found\nof Orchid, several Ornamental plants, and \nsome very useful medicinal plants.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.315501,
+      "longitude": 93.984674,
+      "address": {
+        "city": "Chandel",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-06",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-005",
+    "name": "District Hospital,Thoubal",
+    "description": "Thoubal district is bounded by Senapati district on the north, Ukhrul \nand Chandel districts on the east, Churchandpur and Bishnupur districts\n on the south and Imphal West and Imphal East districts on the west\n.It’s about 40kms from Imphal City. The name 'Thoubal' comes from\n 'Athouba' meaning brave people symbolising the courageous people\n of the district. This district is known for Khongjom, where the last battle \nof the independence of Manipur was fought in April 1891 against t\nhe British army. It is also the window to South-East Asia as the Trans-Asian\n highway (AH1) passes through it.This district is a part of the valley,\n the area of the district is not entirely plain. The State of Manipur used to\n supplement its meager resources from the annual lease of the lakes in\n the past.The district has three community development blocks namely \n(1)Lilong (2)Thoubal and (3) Wangjing Tentha  It has 6 main towns. \nnamely, Lilong ( Thoubal ), Thoubal,Yairipok, Shikhong Sekmai,\n Wangjing Lamding, and Heirok are municipalities under Thoubal District.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.625133,
+      "longitude": 94.012906,
+      "address": {
+        "city": "Thoubal",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-06",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-006",
+    "name": "District Hospital Ukhrul",
+    "description": "Ukhurl district is known for its scenic beauty, pristine climate\n and the rare Shirui Lily, the hill-station of Ukhrul is about 103 kms\n from Manipur’s capital Imphal. Bounded by Myanmar on the east, \nNagaland to the north and Senapati district to its west, Ukhrul’s relative\n inaccessibility and remoteness has helped the district retain its pristine charm.\n It has the distinction of being the highest hill station of Manipur. \nThe climate of Ukhrul district is sub-tropical monsoon type.\n However, winters tend to be chilly. It is always covered by the clouds. \nIt’s  the home of the Tangkhul tribes, who are a highly cultured people. \nWith Mongol origins, the Tangkhuls were believed to have come \nfrom China centuries ago.The state flower of Manipur, Shirui Lily, also \ncalled Shirui Lily or Lilium Macklinae is a rare pinkish white flower found\n only in the Shirui Hill Range in the Ukhrul District of Manipur. \nBesides the Shirui lily, the district is known for many natural \nwonders like the Khangkhui Mangsor, Mova (cave) which is \none of the oldest archaeological cave of India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.098145,
+      "longitude": 94.365111,
+      "address": {
+        "city": "Ukhrul",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-06",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-007",
+    "name": "CHC Kamjong",
+    "description": "Kamjong District is a newly created district on 8 December 2016 \nand shares a long international border with Myanmar. It is bounded\n by Myanmar in the east, Senapati in the West, Ukhrul in the North \nand Chandel in the South. The terrain of the district is hilly with varying \nheights of 913 m to 3114 m (MSL). The district headquarter is linked with\n state highway of 120 Km from Imphal.c There are 4 sub-divisions in \nKamjong district:Kamjong,Sahamphung,Kasom Khullen,Phungyar. \nMajority of  the inhabitants are from Tangkhul Naga tribe. \nThis district is famous for the Wuyawon flower which is pinkish \nin colour and blooms beautifully at around the month of July covering its hills.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.858039,
+      "longitude": 94.515486,
+      "address": {
+        "city": "Kamjong",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "planned"
+  },
+  {
+    "id": "10bed-manipur-008",
+    "name": "District Hospital,Senapati",
+    "description": "Senapati District is located in the northern part of Manipur \nbordered by Phek district on the North( Nagaland), \nTamenglong District on the West, Imphal East and West District\n on the South and Ukhrul district on the east. The general\n topography of the district is hilly. The hills run in the north to south \nalignment gradually sloping down to south meeting the plain of\n Manipur valley. Senapati District is known for its kaleidoscopic\n landscape of blue hills, green valleys, serpentine streams and\n rivers flowing through mountains and deep gorges making \nit a perfect outdoor location in Manipur A popular attraction in \nthe Senapati District is the mesmerizing Dzuko Valley\nThe land is rich of flora and fauna. The forest is adorned with \ncenturies old trees. The district comes under humid Sub-tropical climate.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.285395,
+      "longitude": 94.030124,
+      "address": {
+        "city": "Senapati",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-11",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-009",
+    "name": "Sub District Hospital, Moreh",
+    "description": "Tengnoupal district is a new district in Manipur, India created by splitting\n the Chandel district on December 2016. The name Tengnoupal is derived \nfrom cactus fencing (teng = cactus and pal = fence). It was named after \nthe Awa Laan (Manipur-Burmese War) in the 16th century as cactus was \nplanted as a fencing in Tengnoupal Hill range to defend against the invasion \nof Burmese to the Meitei kingdom of the Imphal Valley.  It’s located about \n65 kms south-southeast of Imphal, the state capital, at the highest point of\n a road between Imphal and northwestern Myanmar (Burma). This area was\n invaded by the Chinese in 1631 and was bombed by the Japanese in 1942 \nduring World War II.The general topography of the district is hilly. \nThe Sub-divisions : Moreh, Machi and Tengnoupal are under Tengnoupal District.\nMoreh plays a very important role in connection with the India-Myanmar\n relationship and is also a rapidly developing trade point in India on the border \nwith Myanmar, with the city of Tamu on the other side of the border. \nThe Indo-Myanmar Friendship Bridge in Moreh connects India to Kalewa in \nMyanmar’s Sagaing Division.The town is already seen as the commercial \ncapital of Manipur and India’s Gateway to South-East Asia.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.252083,
+      "longitude": 94.301769,
+      "address": {
+        "city": "Tengnoupal",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "planned"
+  },
+  {
+    "id": "10bed-manipur-010",
+    "name": "CHC Kakching",
+    "description": "Kakching District is one of the newly formed district of Manipur \non December, 2016 and it is located in the southern \npart of Imphal valley. It’s about 44 km from the state capital at\n Imphal, and about 70 km from the international border with Burma. \nKakching is known as the granary of Manipur. Its workers produce \nthe highest percentage of food grains in the state. Hand-loom and \nhandicraft products are also made in high volume for the Kakching \nmarket. Socially the town is exceptionally wealthy in numerous fields,\n for example, Nat Sankritan, Meitei pung cholom, Martial Arts, Thang-Ta, \nSatjal, Mukna, and Kangjei.Kakching has the highest literacy rate in the \nstate of Manipur. During the Second World War and as part of campaigns\n against the Indian National Army and its allies, the British Government \nin India constructed an aerodrome in Kakching which provided the British\n Army with vital arms, ammunition and food. Today the site is occupied \nmostly by the Assam Rifles and partially converted into paddy fields by \nlocal farmers. Indian national hero, Subhas Chandra Bose, took his last\n flight from the aerodrome after the war before his controversial death.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.499221,
+      "longitude": 93.96769,
+      "address": {
+        "city": "Kakching",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "planned"
+  },
+  {
+    "id": "10bed-manipur-011",
+    "name": "CHC Parbung",
+    "description": "Pherzawl District is located in the southern part of the state of Manipur. The Pherzawl District came into existence on 8 December 2016, with its headquarters at Pherzawl.  .It is bounded on the east by Churachandpur District; on the north by Tamenglong District; on the west by the Cachar District of Assam and on the South by Sinlung Hills, Mizoram.The district is divided into 4 sub-divisions: Pherzawl Sub-Division,Parbung Sub-Division,Thanlon Sub-Division and Vangai Range Sub-Division\nThe general topography of the district is hilly. The district is under humid subtropical climate",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.262066,
+      "longitude": 93.189843,
+      "address": {
+        "city": "Pherzwal",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-15",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-012",
+    "name": "JNIMS",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.809996,
+      "longitude": 93.961167,
+      "address": {
+        "city": "Imphal East",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-05",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-013",
+    "name": "CHC Sekmai",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.937748,
+      "longitude": 93.879663,
+      "address": {
+        "city": "Imphal West",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "planned"
+  },
+  {
+    "id": "10bed-manipur-014",
+    "name": "CHC Nungba",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.746337,
+      "longitude": 93.425101,
+      "address": {
+        "city": "Noney",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "planned"
+  },
+  {
+    "id": "10bed-manipur-015",
+    "name": "CHC Kangpokpi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.150401,
+      "longitude": 93.970208,
+      "address": {
+        "city": "Kangpokpi",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-01-11",
+    "status": "active"
+  },
+  {
+    "id": "10bed-manipur-016",
+    "name": "District Hospital Jiribam",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.778446,
+      "longitude": 93.138547,
+      "address": {
+        "city": "Jiribam",
+        "state": "Manipur",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-02",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-001",
+    "name": "K R Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 19.664125,
+      "longitude": 78.525084,
+      "address": {
+        "city": "Mysuru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-05-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-002",
+    "name": "GH Malavalli",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.38492,
+      "longitude": 77.059904,
+      "address": {
+        "city": "Mandya",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-003",
+    "name": "GH HD Kote",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.000371,
+      "longitude": 76.39692,
+      "address": {
+        "city": "Mysuru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-004",
+    "name": "GH Nanjanagudu",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.127664,
+      "longitude": 76.681099,
+      "address": {
+        "city": "Mysuru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-005",
+    "name": "GH Gundlupete",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.8094,
+      "longitude": 76.688301,
+      "address": {
+        "city": "Chamarajanagar",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-006",
+    "name": "GH Virajpet",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.196543,
+      "longitude": 75.800996,
+      "address": {
+        "city": "Kodagu",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-007",
+    "name": "GH Shahpur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.693234,
+      "longitude": 76.847117,
+      "address": {
+        "city": "Yadgir",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-04-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-008",
+    "name": "GH Arakalagudu",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.762787,
+      "longitude": 76.062871,
+      "address": {
+        "city": "Hassan",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-009",
+    "name": "GH Chintamani",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.402078,
+      "longitude": 78.053252,
+      "address": {
+        "city": "Chikballapur",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-02-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-010",
+    "name": "GH Sindhanur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.771194,
+      "longitude": 76.757273,
+      "address": {
+        "city": "Raichur",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-04-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-011",
+    "name": "GH Sira",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.742632,
+      "longitude": 76.898989,
+      "address": {
+        "city": "Tumakuru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-012",
+    "name": "GH Challakere",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.317593,
+      "longitude": 76.651196,
+      "address": {
+        "city": "Chitradurga",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-013",
+    "name": "GH Naragund",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.717816,
+      "longitude": 75.386749,
+      "address": {
+        "city": "Gadag",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-014",
+    "name": "GH Yelburga",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.607622,
+      "longitude": 76.010112,
+      "address": {
+        "city": "Koppal",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-015",
+    "name": "Yadgir Dist Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.752551,
+      "longitude": 77.138803,
+      "address": {
+        "city": "Yadgir",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-016",
+    "name": "GH Basavakalyan",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.860078,
+      "longitude": 76.94531,
+      "address": {
+        "city": "Bidar",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-017",
+    "name": "GH Holenarasipura",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.786089,
+      "longitude": 76.244085,
+      "address": {
+        "city": "Hassan",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-06-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-018",
+    "name": "Haveri Dist Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.786261,
+      "longitude": 75.402755,
+      "address": {
+        "city": "Haveri",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-019",
+    "name": "GH Sagara",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.946093,
+      "longitude": 75.53664,
+      "address": {
+        "city": "Shivamogga",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-02-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-020",
+    "name": "GH Jamakhandi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.171675,
+      "longitude": 75.66706,
+      "address": {
+        "city": "Bagalkot",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-021",
+    "name": "GH Hospet",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.267349,
+      "longitude": 76.380594,
+      "address": {
+        "city": "Ballari",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-022",
+    "name": "GH Gokak",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.162743,
+      "longitude": 74.815867,
+      "address": {
+        "city": "Belagavi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-023",
+    "name": "GH Srinivasapura",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.338952,
+      "longitude": 78.21657,
+      "address": {
+        "city": "Kolar",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-02-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-024",
+    "name": "GH Lingasugur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.158131,
+      "longitude": 76.520689,
+      "address": {
+        "city": "Raichur",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-025",
+    "name": "GH Channapatna",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.656566,
+      "longitude": 77.202838,
+      "address": {
+        "city": "Ramanagara",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-03-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-026",
+    "name": "GH Kollegal",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.158232,
+      "longitude": 77.110852,
+      "address": {
+        "city": "Chamarajanagar",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-08-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-027",
+    "name": "GH Kadur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.553792,
+      "longitude": 76.014383,
+      "address": {
+        "city": "Chikkamagaluru",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-028",
+    "name": "GH Bagepalli",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.783131,
+      "longitude": 77.792708,
+      "address": {
+        "city": "Chikballapur",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-06-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-029",
+    "name": "GH Devanahalli",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.256927,
+      "longitude": 77.727742,
+      "address": {
+        "city": "Bengaluru Rural",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-03-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-030",
+    "name": "GH Savadatti",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.766002,
+      "longitude": 75.116567,
+      "address": {
+        "city": "Belagavi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-12-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-031",
+    "name": "GH Bantwal",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.893868,
+      "longitude": 75.041449,
+      "address": {
+        "city": "Dakshin Kannad",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-06-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-032",
+    "name": "GH Honnali",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.238201,
+      "longitude": 75.636522,
+      "address": {
+        "city": "Davangere",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-04-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-033",
+    "name": "GH Kundgol",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.259532,
+      "longitude": 75.241695,
+      "address": {
+        "city": "Arwad",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-034",
+    "name": "GH Shiggaon",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.997545,
+      "longitude": 75.226152,
+      "address": {
+        "city": "Haveri",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-02-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-035",
+    "name": "GH Jewargi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.026898,
+      "longitude": 76.773949,
+      "address": {
+        "city": "Kalaburagi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2022-11-28",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-036",
+    "name": "GH Somwarpet",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.60248,
+      "longitude": 75.849821,
+      "address": {
+        "city": "Kodagu",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-04-06",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-037",
+    "name": "GH Nagamangala",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.837768,
+      "longitude": 76.760545,
+      "address": {
+        "city": "Mandya",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-09-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-038",
+    "name": "GH Bhatkal",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.997833,
+      "longitude": 74.55292,
+      "address": {
+        "city": "Uttar Kannada",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-08-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-039",
+    "name": "GH Siruguppa",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.6353,
+      "longitude": 76.896004,
+      "address": {
+        "city": "Bellary",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-04-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-040",
+    "name": "GH Sandur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.08738,
+      "longitude": 76.547745,
+      "address": {
+        "city": "Bellary",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2024-04-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-041",
+    "name": "GH Yellapura",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.980541,
+      "longitude": 74.718791,
+      "address": {
+        "city": "Uttar Kannada",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-11-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-042",
+    "name": "GH Basavana Bagewadi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.603746,
+      "longitude": 75.969109,
+      "address": {
+        "city": "Vijayapura",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-043",
+    "name": "GH Aland",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.329687,
+      "longitude": 76.834267,
+      "address": {
+        "city": "Kalaburagi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": "2023-01-01",
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-044",
+    "name": "GH Sedam",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 19.664125,
+      "longitude": 78.525084,
+      "address": {
+        "city": "Kalaburagi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-045",
+    "name": "GH Sullya",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.562172,
+      "longitude": 75.389865,
+      "address": {
+        "city": "Dakshin Kannad",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-046",
+    "name": "GH Channagiri",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.024549,
+      "longitude": 75.930201,
+      "address": {
+        "city": "Davangere",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-047",
+    "name": "GH Kalaghatagi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.191056,
+      "longitude": 74.970376,
+      "address": {
+        "city": "Arwad",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-048",
+    "name": "Bangalore South",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 12.910795,
+      "longitude": 77.603886,
+      "address": {
+        "city": "Bengaluru Urban",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-049",
+    "name": "GH Brahmavara",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 13.436884,
+      "longitude": 74.742817,
+      "address": {
+        "city": "Udupi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-050",
+    "name": "GH Savanur",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.976339,
+      "longitude": 75.334292,
+      "address": {
+        "city": "Haveri",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-051",
+    "name": "GH Sirsi",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 14.615372,
+      "longitude": 74.829982,
+      "address": {
+        "city": "Uttar Kannada",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-052",
+    "name": "GH Muddebihal",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.328979,
+      "longitude": 76.127404,
+      "address": {
+        "city": "Vijayapura",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-053",
+    "name": "GH Athani",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.727707,
+      "longitude": 75.059826,
+      "address": {
+        "city": "Belagavi",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-054",
+    "name": "GH Humnabad",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 17.773235,
+      "longitude": 77.124977,
+      "address": {
+        "city": "Bidar",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-karnataka-055",
+    "name": "GH Joida",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 15.159523,
+      "longitude": 74.488715,
+      "address": {
+        "city": "Uttar Kannada",
+        "state": "Karnataka",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-001",
+    "name": "Williamnagar Civil Hospital",
+    "description": "East Garo Hills District was upgraded from a sub-division to a full-fledged district in 1976, after the erstwhile Garo Hills District was reorganised with a view to bring the administration closer to the people. In 2012 East Garo Hills District was further reorganised to form a new district out of the erstwhile Resubelpara Sub-Division. The District is bounded by South Garo Hills on the south, West Garo Hills on the west, West Khasi Hills on the east and North Garo Hills on the north.\n\nThe headquarter-complex, Williamnagar is a neatly planned township, christened after Captain Williamson A. Sangma, the first Chief Minister of the State of Meghalaya. Williamnagar now has all the amenities of a modern town and is the largest growth centre in Garo Hills, next to Tura.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.514353,
+      "longitude": 90.604685,
+      "address": {
+        "city": "East Garo Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-002",
+    "name": "Khliehriat DH",
+    "description": "East Jaintia Hills District is one of the 11 (eleven) districts of the state of Meghalaya. With the bifurcation of the erstwhile Jaintia Hills District into East and West Jaintia Hills District, East Jaintia Hills District came into existence on 31st July 2012 with its Head Quarter at Khliehriat. East Jaintia Hills is the home of one of the major tribes of the state of Meghalaya popularly known as the ‘Jaintias’ or the ‘Pnars’ and other sub tribes like the ‘Wars’ and the ‘Biates’. It comprises all the village of two community and rural development blocks viz. Saipung community & Rural Development Block and Khliehriat community & Rural Development Block. East Jaintia Hills District was upgraded from the erstwhile Khliehriat Civil Sub-Division. Prior to the establishment of a Sub-Division, there was an Administrative Unit set up in August 14, 1976 with an objective to bring administration closer to the people at the grass-root level. After five and a half year, the unit was upgraded into a full-fledged Civil Sub-Division in May 27, 1982 with the Sub-Divisional Officer as an administrative head and then upgraded to a District on 31st July 2012 when Meghalaya Government took ample steps to create four more districts in 2012.  East Jaintia Hills District is located at the eastern most part of Meghalaya. It covers an area of 2040 sq. kms.  It is bounded by Bangladesh in the South, North Cachar Hills District in the East and West Jaintia Hills District in the North and West. Its distance from the state capital is 97 kms and the National Highway 44 Connecting Shillong and the eastern part of Assam pass through the district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.343768,
+      "longitude": 92.371264,
+      "address": {
+        "city": "East Jaintia Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-003",
+    "name": "Khliehriat MCH",
+    "description": "East Jaintia Hills District is one of the 11 (eleven) districts of the state of Meghalaya. With the bifurcation of the erstwhile Jaintia Hills District into East and West Jaintia Hills District, East Jaintia Hills District came into existence on 31st July 2012 with its Head Quarter at Khliehriat. East Jaintia Hills is the home of one of the major tribes of the state of Meghalaya popularly known as the ‘Jaintias’ or the ‘Pnars’ and other sub tribes like the ‘Wars’ and the ‘Biates’. It comprises all the village of two community and rural development blocks viz. Saipung community & Rural Development Block and Khliehriat community & Rural Development Block. East Jaintia Hills District was upgraded from the erstwhile Khliehriat Civil Sub-Division. Prior to the establishment of a Sub-Division, there was an Administrative Unit set up in August 14, 1976 with an objective to bring administration closer to the people at the grass-root level. After five and a half year, the unit was upgraded into a full-fledged Civil Sub-Division in May 27, 1982 with the Sub-Divisional Officer as an administrative head and then upgraded to a District on 31st July 2012 when Meghalaya Government took ample steps to create four more districts in 2012.  East Jaintia Hills District is located at the eastern most part of Meghalaya. It covers an area of 2040 sq. kms.  It is bounded by Bangladesh in the South, North Cachar Hills District in the East and West Jaintia Hills District in the North and West. Its distance from the state capital is 97 kms and the National Highway 44 Connecting Shillong and the eastern part of Assam pass through the district.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.359846,
+      "longitude": 92.368224,
+      "address": {
+        "city": "East Jaintia Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-004",
+    "name": "Ganesh Das Govt. MCH",
+    "description": "East Khasi Hills is an administrative district in the state of Meghalaya in India. Khasi (Ka Ktien Khasi) is an Austroasiatic language spoken primarily in Meghalaya state in India by the Khasi people. The district headquarters are located at Shillong. The district occupies an area of 2752 km² and has a population of 825,922. As of 2011 it is the most populous district of Meghalaya. The headquarters of the district, Shillong which is also the capital city of State, is connected to Guwahati and Silchar by NH 44 of 103 km and 240 km respectively. The nearest Rail head and airport are situated at Guwahati. There is an airstrip suitable for small aircraft at Umroi which is 35 km from Shillong. The agricultural and other products are transported by trucks, jeeps and tractors. Shillong is well connected with other parts of the State by motorable road. Similarly, all the block headquarters in the district are also connected by roads. However, the villages in the interior areas are poorly connected and transport services are inadequate.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.583729,
+      "longitude": 91.882219,
+      "address": {
+        "city": "East Khasi Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-005",
+    "name": "Resubelpara CHC",
+    "description": "The district of North Garo Hills forms the Northern most part of the Garo Hills region of the state of Meghalaya and it is the gateway to the entire region as it shares a long border with the neighbouring state of Assam. The population is a mixture of indigenous Garo tribes along with other minor tribes comprising of Rabhas, Hajongs, Kacharis and Boros. The climate is sub tropical with adequate rainfall. The people are an ethnic mix of Indo-Burmese-Tibetan ancestry. The district occupies an area of 1,113 km² and has a population of 1,18,325.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.899608,
+      "longitude": 90.608138,
+      "address": {
+        "city": "North Garo Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-006",
+    "name": "Nongpoh Civil Hospital",
+    "description": "Ri Bhoi District came into existence and assumed the hierarchical status of the District on the 4th June 1992 by upgrading the former Civil Sub-Division. The District was carved out from the erstwhile East Khasi Hills District . Nongpoh is the District headquarter and as well as that of Nongpoh Sirdarship. Ri Bhoi District contains an area of 2448.00 Sq.KMS excluding the geographical areas under the erstwhile Nongwah Syiemship and other places which fall under the ‘Areas of Differences’ between Assam and Meghalaya. The Bhois of Ri Bhoi District are the Sub – group of the main Khasi Tribe. The majority of the Bhois speak the Bhoi dialect, although they use the Khasi dialect as a major subject in their schools. In Ri Bhoi District, there are other groups of tribes viz, Garos, who speak the Tibeto – Burman groups of language, whereas the Karbis, Marngars, Mikirs, Bodos and Lalungs use Assamese as their Lingua Franca. Some speak and write Khasi too. The Bhois follow the matrilenial system. Children bear the title of the mother and she is the safe keeper of all properties owned by her parents.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.88942,
+      "longitude": 91.615102,
+      "address": {
+        "city": "Ribhoi",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-007",
+    "name": "Baghmara Civil Hospital",
+    "description": "The South Garo Hills district lies in the southern part of the state of Meghalaya, and was created on 18th June, 1992 . The district is hilly with difficult terrain with its headquarter at Baghmara, the only town in the district. It is bounded in the North by East Garo Hills, in the East by the west Khasi Hills district, in the West by West Garo Hills district and in the South by Bangladesh. Garo society is matrilineal, and inheritance is through the mother. All children, as soon as they are born, belong to their mother's ma'chong. The Garo tribe is divided into five exogamous divisions called Chatchis (sometimes rendered as Katchis). Two of these are relatively unimportant in that they include an insubstantial part of the population. There are several places in the district  that can be  developed for tourism. Some of them are of historical importance;  others are important because of their association with the cultural traditions of the Garo people and many of them again have deservedly earned fame for their scenic beauty. Much of the area still remain untouched, retaining almost intact the original flora and fauna.  Garo hills known for its abundance of wild life, should interest naturalists and photographers to capture the facts of life of animals and the flora and fauna.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.223346,
+      "longitude": 90.16095,
+      "address": {
+        "city": "South Garo Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-008",
+    "name": "Mawkyrwat 100 bedded/ MCH",
+    "description": "The South West Khasi Hills district was carved out of the West Khasi Hills district on 3 August 2012. The district headquarters is located at Mawkyrwat. The district occupies an area of 1,341 km². The district is compose all the villages of two Community & Rural Development Blocks viz. Ranikor and Mawkyrwat are Community & Rural Development Block, including 18 (Eighteen) Villages under Warsan Lyngdoh Gram Sevak Circle of Nongstoin in Community & Rural Development Block.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.446599,
+      "longitude": 91.304975,
+      "address": {
+        "city": "South West Khasi Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-009",
+    "name": "Tura MCH",
+    "description": "West Garo Hills is one of the largest district of Meghalaya located in the western part of the State. The Garo Hills district was divided into two districts, viz the West Garo Hills district and the East Garo Hills district in October 1976. The erstwhile West Garo Hills district was further divided into two administrative districts of West and South Garo Hills on June 1992. The district headquarters of West Garo Hills is Tura, which is the second largest town in the State after Shillong. The West Garo Hills district lies on the western part of the state of Meghalaya bounded by the East Garo Hills district on the east, the South Garo Hills on the south-east, the Goalpara district of Assam on the north and north-west and Bangladesh on the south. West Garo Hills district is pre-dominantly inhabited by the Garos, a tribe with a matrilineal society belonging to the Bodo family of the Tibeto-Burman race tribes. Other indigenous inhabitants are the Hajongs, Rabhas, Koches, Rajbansis, Meches, Kacharis and Dalus. The district is also inhabited by Bengalis, Assamese, Nepalese, Marwaries, Biharis and people from other parts of India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.445518,
+      "longitude": 90.814544,
+      "address": {
+        "city": "West Garo Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-010",
+    "name": "Phulbari CHC",
+    "description": "West Garo Hills is one of the largest district of Meghalaya located in the western part of the State. The Garo Hills district was divided into two districts, viz the West Garo Hills district and the East Garo Hills district in October 1976. The erstwhile West Garo Hills district was further divided into two administrative districts of West and South Garo Hills on June 1992. The district headquarters of West Garo Hills is Tura, which is the second largest town in the State after Shillong. The West Garo Hills district lies on the western part of the state of Meghalaya bounded by the East Garo Hills district on the east, the South Garo Hills on the south-east, the Goalpara district of Assam on the north and north-west and Bangladesh on the south. West Garo Hills district is pre-dominantly inhabited by the Garos, a tribe with a matrilineal society belonging to the Bodo family of the Tibeto-Burman race tribes. Other indigenous inhabitants are the Hajongs, Rabhas, Koches, Rajbansis, Meches, Kacharis and Dalus. The district is also inhabited by Bengalis, Assamese, Nepalese, Marwaries, Biharis and people from other parts of India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.88826,
+      "longitude": 90.036864,
+      "address": {
+        "city": "West Garo Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-011",
+    "name": "Jowai MCH",
+    "description": "West Jaintia Hills District is one of the 11 (eleven) districts of the state of Meghalaya. With the bifurcation of the erstwhile Jaintia Hills District into East and West Jaintia Hills District, West Jaintia Hills District came into existence on 31st July 2012 with its Head Quarter at Jowai. Jowai is the host of all the heads of important governmental offices and establishments, educational institutions, hospitals, banking institutions, etc\n\nThe total area of the district is 1693 Sq.kms. The district comprises of 1(one) Civil Sub-Division Viz. Amlarem Civil Sub-Division and 3(three) Community and Rural Development Blocks viz. Amlarem C&RD Block, Laskein C&RD Block and Thadlaskein C&RD Block. West Jaintia Hills District is the home of one of the major tribes of Meghalaya popularly known as the ‘Jaintias’ or the ‘Pnars’ and other sub tribes like the wars, the ‘Bhois’ and the ‘Biates’. Like the Khasis, the Jaintias are believed to be remnants of the first Mongolian overflow into India. They  established themselves in their present homeland in the remote past and owi ng primarily to their geographical isolation they succeeded in  maintaining their independence until the consolidation of the British administration in this part of India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.454304,
+      "longitude": 92.201844,
+      "address": {
+        "city": "West Jaintia Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-012",
+    "name": "Jowai DH",
+    "description": "West Jaintia Hills District is one of the 11 (eleven) districts of the state of Meghalaya. With the bifurcation of the erstwhile Jaintia Hills District into East and West Jaintia Hills District, West Jaintia Hills District came into existence on 31st July 2012 with its Head Quarter at Jowai. Jowai is the host of all the heads of important governmental offices and establishments, educational institutions, hospitals, banking institutions, etc\n\nThe total area of the district is 1693 Sq.kms. The district comprises of 1(one) Civil Sub-Division Viz. Amlarem Civil Sub-Division and 3(three) Community and Rural Development Blocks viz. Amlarem C&RD Block, Laskein C&RD Block and Thadlaskein C&RD Block. West Jaintia Hills District is the home of one of the major tribes of Meghalaya popularly known as the ‘Jaintias’ or the ‘Pnars’ and other sub tribes like the wars, the ‘Bhois’ and the ‘Biates’. Like the Khasis, the Jaintias are believed to be remnants of the first Mongolian overflow into India. They  established themselves in their present homeland in the remote past and owi ng primarily to their geographical isolation they succeeded in  maintaining their independence until the consolidation of the British administration in this part of India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.438198,
+      "longitude": 92.199343,
+      "address": {
+        "city": "West Jaintia Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-013",
+    "name": "Nongstoin DH / CH",
+    "description": "West Khasi Hills District was carved out of the state of Meghalaya in the year 1976 on the 28 day of October which in fact is the largest of all the eleven districts in the state of Meghalaya and since its existence, it has been bifurcated into two Civil Sub-divisions and a new district in South West Khasi Hills. It spreads through the heart of the state running high with plateau ranges and low with rich plain lands. The District lies in the central part of the State of Meghalaya.  It is bounded on the north-west by Kamrup district of Assam, on the north-east by Ri Bhoi district, on the east by East Khasi Hills district, on the south by Bangladesh and South West Khasi Hills district, the erstwhile Mawkyrwat Civil Sub division, on the west by East Garo and South Garo Hills districts. The district comprises an area of about 3911.22 sq.kms which is about 17 percent of the total area of the state. Nongstoin, covering an area of about 76.00 Sq. Kms, is the Headquarter of the District.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.560476,
+      "longitude": 91.631393,
+      "address": {
+        "city": "West Khasi Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-meghalaya-014",
+    "name": "Mairang MCH / CH",
+    "description": "West Khasi Hills District was carved out of the state of Meghalaya in the year 1976 on the 28 day of October which in fact is the largest of all the eleven districts in the state of Meghalaya and since its existence, it has been bifurcated into two Civil Sub-divisions and a new district in South West Khasi Hills. It spreads through the heart of the state running high with plateau ranges and low with rich plain lands. The District lies in the central part of the State of Meghalaya.  It is bounded on the north-west by Kamrup district of Assam, on the north-east by Ri Bhoi district, on the east by East Khasi Hills district, on the south by Bangladesh and South West Khasi Hills district, the erstwhile Mawkyrwat Civil Sub division, on the west by East Garo and South Garo Hills districts. The district comprises an area of about 3911.22 sq.kms which is about 17 percent of the total area of the state. Nongstoin, covering an area of about 76.00 Sq. Kms, is the Headquarter of the District.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.554138,
+      "longitude": 91.632961,
+      "address": {
+        "city": "West Khasi Hills",
+        "state": "Meghalaya",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-001",
+    "name": "DH Dimapur",
+    "description": "Dimapur district was inaugurated as the eighth district of Nagaland in December, 1997, through a Government of Nagaland, Home Department notification no. GAB-5/29/78(pt) dated 02-12-1997. Earlier it was a sub-division under Kohima district. Besides being referred to as a gateway of Nagaland and Manipur, main commercial activities of the State, is centered around Dimapur, the district headquarter. Dimapur district in Nagaland is bounded by Kohima district on the south and east, Karbi Anglong district of Assam on the West, the Karbi Anglong and stretch of Golaghat District of Assam, in the west and the north. The only railhead and airport of the State is located in Dimapur, the district headquarter. The National Highway 29 connects the State capital kohima and also connects the neighbouring States of Manipur, Tripura and Mizoram. Dimapur city, the district headquarter is distinct in its character where all the different communities have congregated, portraying a mini India.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.905077,
+      "longitude": 93.729419,
+      "address": {
+        "city": "Dimapur",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-002",
+    "name": "DH Kiphire",
+    "description": "Kiphire located in the eastern most part of the State bordering Myanmar, and having a total Area of 1255 sq. kms, Kiphire district is 254 km away from the Capital city Kohima. Wedged between Saramati, the highest mountain in the state and the Jingkhu mountains, Kiphire is located at an elevation of 896.42 meters above the mean sea level. On the whole, the climate is humid and hot during summer and cold during winter with winter temperature touching a low of 2.7 ° C and a high of 37.0 ° C during summer. Monsoon period extends from June to September and sometimes up to October. The average rain fall for the last three years is 876 mm. Kiphire is multi-ethnic in terms of its indigenous population. There are officially three recognized tribes – Sangtam, Yimchungrü, and Sümi. Besides these, there are several sub-tribes speaking various languages. As in the case with other Naga groups, each of these diverse ethnic groups is distinguished by their distinctive language. Owing to the many generations of co-habitation, all these ethnic and linguistic groups understand each others’ language and the people often converse interchangeably. Though there are variations in the details of the various cultural practices and customs among the tribes of the district, on the whole, their society is organized along similar structures.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.882501,
+      "longitude": 94.779465,
+      "address": {
+        "city": "Kiphire",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-003",
+    "name": "NHAK, Kohima",
+    "description": "Kohima,  is a hilly district of India’s North Eastern State of Nagaland, sharing its borders with Assam State and Dimapur District in the West, Phek District in the East, Manipur State and Peren District in the South and Wokha District in the North. One of the oldest among the eleven districts of the state, Kohima is the first seat of modern administration as the Headquarters of Naga Hills District (then under Assam) with the appointment of G.H. Damant as Political Officer in 1879. When Nagaland became a full fledged state on 1st December, 1963, Kohima was christened as the capital of the state. Since then, parts of Kohima district have been carved out thrice – the first in 1973 when Phek District was created, then in 1998 Dimapur was carved out and declared as a separate district and it was  in 2004 for the third time that Kohima district once again gave birth to one of the youngest districts in the state called Peren District.\n                The name Kohima is so called because the British could not pronounce its original name “KEWHIRA” which is the name of the village where Kohima town is located. Kohima village , also called ‘Bara Basti’ which is the second largest village in Asia forms the North-Eastern part of Kohima Urban area today",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.669966,
+      "longitude": 94.092249,
+      "address": {
+        "city": "Kohima",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-004",
+    "name": "DH Longleng",
+    "description": "Longleng District, the Home of the Phom Nagas, is the tenth district of Nagaland, formed as a result of bifurcation of Tuensang District. It is bounded by Mon District in the East, Mokokchung District in the west, Sivasagar District (Assam) in the North and Tuensang District in the south. Longleng District is headquartered at Longleng Town (about 1,100m above sea level). Longleng and Tamlu are the major towns of the district. Most of the inhabitants belong to the Phom tribes.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.492933,
+      "longitude": 94.802054,
+      "address": {
+        "city": "Longleng",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-005",
+    "name": "IMDH, Mokokchung",
+    "description": "Mokokchung is known as the 'intellectual and cultural capital' of Nagaland. It is a major district of Nagaland in India and its district headquarter is located in the main urban centre of the district also called Mokokchung town. It is mainly occupied by the Ao Naga tribe who consider it their home and and politically the most significant urban centre in northern Nagaland. It is bounded by the state of Assam to its north, Wokha district to its west, Tuensang and Longleng district to its east, and Zunheboto district to its south.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.318882,
+      "longitude": 94.450707,
+      "address": {
+        "city": "Mokokchung",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-006",
+    "name": "DH Mon",
+    "description": "Mon district is the home of the Konyak Nagas. The Konyak are famous for their tattooned faces and bodies. It covers an area of 1786 Sq.km.,  is bounded on the North by Sibsagar District of Assam,on the South by Tuensang District of Nagaland and  Myanmar (Burma), on the East by Myanmar (Burma) and on the West by Tuensang and Mokokchung Districts of Nagaland. On her Northeast lies the Tirap District of Arunachal Pradesh. The altitude of Mon district headquarters is 897.64 meters above sea level.  The District, with the exception of the foothills, is hilly with steep slopes. Low-lying areas with undulating hills characterize the foothills.The Mon District has a fairly moderate climate. Days are warm and nights are cool. Rainy season sets in the month of May and lasts till October. From November to April, the District has dry weather with relatively cool nights and bright and sunny days. The average relative humidity is 76 per cent and the average temperature is 24.4 degrees Celsius.\nIn the higher altitude, summers are pleasantly warm while winter is quite cold. The lower altitude especially those adjoining the plains of Assam experience hot summers but pleasant winters.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.723873,
+      "longitude": 95.026503,
+      "address": {
+        "city": "Mon",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-007",
+    "name": "DH Peren",
+    "description": "Peren is the eleventh and the newest district of Nagaland, formed as a result of bifurcation of Kohima District. It is bounded by Assam State and Dimapur District in the west and north western part respectively, as well as Kohima District and Manipur State in the east and south part respectively. Peren District is headquartered at Peren (about 1,445m above sea level). Peren, Jalukie and Tening are the major towns of the district. Most of the inhabitants belong to the Zeliang and Kuki tribes.The land is fertile for Agro base production and the people of Peren district are mainly agrarian (80%) by occupation and paddy is the livelihood of the populace, and Jalukie Valley known as the Rice Bowl of Nagaland. Besides paddy, of late the people have taken up crops like Pineapple, yam, beans, ginger, Banana, and other Horticulture products,which supplement the crops. The popular Naga King’s Chilies is a translation of the words Chaibe Rachi meaning Chaibe = King’s + Rachi = chilly, both the name and the Chilies originated from Peren district.The important Festivals of the Zeliang and Kuki are Meleinyi/ Hega, (Zeliang) and Minkut (Kuki) is celebrated in February- March every year, where as Langsemnyi /Chaga Gadi are celebrated in the month of October.It has Tropical Type to sub tropical type to temperate types of climates moderate climate.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.51947,
+      "longitude": 93.714742,
+      "address": {
+        "city": "Peren",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-008",
+    "name": "DH Phek",
+    "description": "Phek is a District which lies on the South – Eastern part of Nagaland, bounded by Mynmar in the east, Zunaboto and Kiphire in the North, Manipur in the South and kohima in the West. It has an area of 2,026 square kilometer (Approximately) and a population of 163,418 of which male and female were 83,743 and 79,675 respectively in 2011census. It is situated at a distance of 145 km from state capital of kohima to the District Headquareter with an altitude of 1524 meters. The district HQ town of Phek lies at the lowest altitude of the district at 1,524m above sea level, with the village of Pfutsero Town at the highest point of 2,136m above sea level.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.572053,
+      "longitude": 93.854767,
+      "address": {
+        "city": "Phek",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-009",
+    "name": "DH Tuensang",
+    "description": "Tuensang is located in the eastern part of Nagaland. It is bounded by Mon and Longleng Districts in the north and north east respectively, Mokokchung in the northwest, Zunheboto in the southwest, Kiphire in the south, and Myanmar in the east. In the early seventies, at the instance of the Geographical Survey of India in collaboration with the Myanmar Government, 9(nine) RCC pillars touching Tuensang were erected all along the International Border demarcating India and Myanmar. The whole area of the district is 1,728 sq.km (Approximately)",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.244416,
+      "longitude": 94.764303,
+      "address": {
+        "city": "Tuensang",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-010",
+    "name": "DMMDH, Wokha",
+    "description": "Wokha literally means Census in Lotha. It was a place where Lothas counted heads before spreading out into the villages during their waves of migration. Wokha District is the Home of Lothas having a total geographical area of 1628 Sq. Km, accounting 9.82% of the total geographical area of the State, Wokha District is situated in the mid Western part of the Nagaland State. The Wokha District is situated in the mid western part of Nagaland State, adjacent to Sibsagar plain of the Assam State. It is bounded by Mokokchung District in the North, Kohima District in the South. Zunheboto District in the East and the State of the Assam in the West. The Wokha District is situated at a latitude of 26° ‘8’ North and a longitude of 94° ’18’ East.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.092412,
+      "longitude": 94.261265,
+      "address": {
+        "city": "Wokha",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-011",
+    "name": "HMDH Zunheboto",
+    "description": "Zunheboto District is situated in the heart of Nagaland bounded by Mokokchung District in the North, Phek District in the South, Tensuang and Kiphire district in the east and Kohima/Wokha district in the West. The whole area is mountainous covered with dense forest with a total area of 1255 Sq.Km. As per 2011 Census the district is having total population of1,14,014. The District Headquarter is 150 Kms away from the State Capital, Kohima.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.003016,
+      "longitude": 94.506247,
+      "address": {
+        "city": "Zunheboto",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-nagaland-012",
+    "name": "DH Noklak",
+    "description": "Noklak District is a Tribal District inhabited by recognized Naga Tribes, the Khiamniungan tribe and Yimchunger tribe. Khiamniungan tribe constitute the majority of the population in the District with Yimchunger tribe inhabiting Thonoknyu Sub- Division adjoining Noklak District. The population of the District as per the census 2011 stands at 55,434, the population density of which is 51/km2 while the sex ratio (921 females per 1000 males) is lower than the state average of 931. The rural population constitutes more than 86 % and only 14% urban. The search for, health, and education, livelihood opportunities in the urban have led to steady rural-urban migration in the recent years",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.200516,
+      "longitude": 95.007675,
+      "address": {
+        "city": "Noklak",
+        "state": "Nagaland",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-sikkim-001",
+    "name": "District Hospital Singtam",
+    "description": "East Sikkim is one of the four administrative districts of the Indian state of Sikkim. Geographically, East Sikkim occupies the south-east corner of the state. The capital of East Sikkim is Gangtok, which is also the state capital. East district occupies an area of 964 km² and is the second smallest district area wise in the state. It is located at topographical location of Latitude – 27º 25’ North to 27º11’ North and Longitude – 88º 53’ East to 88º26’ 10” East. The district has population of  2,83,583 and 288 nos of villages. The languages spoken by people are Nepali, Sikkimese, Lepcha, tamang, Limbu, Rai, Newari, Gurung, Magar, Sunwar and English. The District is considered to be a very sensitive area sharing boarder with People’s Republic of China and Bhutan.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.229693,
+      "longitude": 88.494688,
+      "address": {
+        "city": "Gangtok",
+        "state": "Sikkim",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-sikkim-002",
+    "name": "District Hospital Gyalshing",
+    "description": "West Sikkim is the second largest district in the Indian state of Sikkim with an area of 1,166 sq km. The headquarters of the district is at Gyalshing, also known as Geyzing. It occupies area of 1166 Sq. Km and has population of 1,36,435. The district has 125 nos of villages. The languages spoken by the people are Nepali, Bhutia & Lepcha",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.292703661,
+      "longitude": 88.256802498,
+      "address": {
+        "city": "Gyalshing",
+        "state": "Sikkim",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-sikkim-003",
+    "name": "District Hospital Mangan",
+    "description": "North Sikkim is the largest in four districts of Sikkim. The landscape is mountainous with dense vegetation to the alpine height before the southern tundra, before leaving the desert. Many waterfalls surrounded by the main road make visit to this district very beautiful. It occupies area of 4226 square. Km and has population of 43,709. The district has 120 nos of villages. The languages spoken by the people are Nepali, Bhutia & Lepcha",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.490837,
+      "longitude": 88.531889,
+      "address": {
+        "city": "Mangan",
+        "state": "Sikkim",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-sikkim-004",
+    "name": "District Hospital Namchi",
+    "description": "South District of Sikkim lies at an altitude of 400 mtr to 2000 mtr with unique and countryside escape of endless waves of agricultural field and the terraced slopes intercepted by spring patched forest and encompasses a total area of around 75000 hectares. It has population of 1,46,850 . The district has 150 nos of villages. The languages spoken by the people are English, Nepali, Bhutia, Lepcha and Limbu",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.169068,
+      "longitude": 88.367817,
+      "address": {
+        "city": "Namchi",
+        "state": "Sikkim",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-sikkim-005",
+    "name": "Community Health Centre Rhenock",
+    "description": "Rhenock is a town in the Pakyong District in Sikkim, India, located on the border with the Kalimpong district of West Bengal. It lies 63 kilometres east of Gangtok, and 47 kilometres north of Kalimpong on the way to Jelepla Pass at an altitude of 1,040 metres.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.1742265,
+      "longitude": 88.6435851,
+      "address": {
+        "city": "Pakyong",
+        "state": "Sikkim",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-001",
+    "name": "Dr Ravi Boro Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.664157,
+      "longitude": 91.340528,
+      "address": {
+        "city": "Baksa",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-002",
+    "name": "Gohpur SDCH",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.876623,
+      "longitude": 93.608419,
+      "address": {
+        "city": "Biswanath",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-003",
+    "name": "Biswanath Charali District Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.78064,
+      "longitude": 93.1466383,
+      "address": {
+        "city": "Biswanath",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-004",
+    "name": "JSB Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.526799,
+      "longitude": 90.490404,
+      "address": {
+        "city": "Chirang",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-005",
+    "name": "SMK Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.448787,
+      "longitude": 91.437041,
+      "address": {
+        "city": "Nalbari",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-006",
+    "name": "Mangaldai Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.438931,
+      "longitude": 92.03674,
+      "address": {
+        "city": "Darrang",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-007",
+    "name": "Udalguri Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.721011,
+      "longitude": 92.078956,
+      "address": {
+        "city": "Udalgiri",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-008",
+    "name": "BP Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.346529,
+      "longitude": 92.688768,
+      "address": {
+        "city": "Nagoan",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-009",
+    "name": "Morigaon Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.253938,
+      "longitude": 92.354903,
+      "address": {
+        "city": "Morigaon",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-010",
+    "name": "Goalpara 200 Beded Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.141934,
+      "longitude": 90.61024,
+      "address": {
+        "city": "Goalpara",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-011",
+    "name": "Kanaklata Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.629696,
+      "longitude": 92.796499,
+      "address": {
+        "city": "Sonitpur",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-012",
+    "name": "Dhemaji Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.45932,
+      "longitude": 94.574849,
+      "address": {
+        "city": "Emaji",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-013",
+    "name": "Tinsukia Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.5049,
+      "longitude": 95.362588,
+      "address": {
+        "city": "Tinsukia",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-014",
+    "name": "Naharkatia SDCH",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.289831,
+      "longitude": 95.3301799,
+      "address": {
+        "city": "Dibrugarh",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-015",
+    "name": "Sonari Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 27.032899,
+      "longitude": 95.059488,
+      "address": {
+        "city": "Charaideo",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-016",
+    "name": "Sivsagar Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.954924,
+      "longitude": 94.610373,
+      "address": {
+        "city": "Sivsagar",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-017",
+    "name": "MCH Building SKKCH",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.509313,
+      "longitude": 93.965361,
+      "address": {
+        "city": "Golaghat",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-018",
+    "name": "SKMCH Bokakhat",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.730303,
+      "longitude": 93.618698,
+      "address": {
+        "city": "Golaghat",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-019",
+    "name": "Haflong Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 25.182897,
+      "longitude": 93.011525,
+      "address": {
+        "city": "Dima Hasao",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-020",
+    "name": "S.K Roy Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.764211,
+      "longitude": 92.796129,
+      "address": {
+        "city": "Hailakandi",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-021",
+    "name": "Covid Hospital Karimganj",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.900872,
+      "longitude": 92.368319,
+      "address": {
+        "city": "Karimganj",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-022",
+    "name": "Singimari",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.218215,
+      "longitude": 91.626153,
+      "address": {
+        "city": "Kamrup (r )",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-023",
+    "name": "Sonapur District Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 26.12123,
+      "longitude": 91.976348,
+      "address": {
+        "city": "Kamrup (m)",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-assam-024",
+    "name": "Bongaigaon Civil Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 19.664125,
+      "longitude": 78.525084,
+      "address": {
+        "city": "Bongaigaon",
+        "state": "Assam",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-puducherry-001",
+    "name": "Indira Gandhi Medical College and Research Institute",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.9404,
+      "longitude": 79.7967,
+      "address": {
+        "city": "Puducherry",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-puducherry-002",
+    "name": "Rajiv Gandhi Government Women &\nChildren's Hospital",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.9374511,
+      "longitude": 79.8046865,
+      "address": {
+        "city": "Puducherry",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-puducherry-003",
+    "name": "Government General Hospital, Karaikal",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 10.9159326,
+      "longitude": 79.8175847,
+      "address": {
+        "city": "Karaikal",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-puducherry-004",
+    "name": "Government General Hospital, Mahe",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 11.6995131,
+      "longitude": 75.5340153,
+      "address": {
+        "city": "Mahe",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-puducherry-005",
+    "name": "Government General Hospital, Yanam",
+    "description": null,
+    "program": "10bedicu",
+    "location": {
+      "latitude": 16.7288993,
+      "longitude": 82.2153929,
+      "address": {
+        "city": "Yanam",
+        "state": "Puducherry",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-001",
+    "name": "Sadar Hospital Chatra",
+    "description": "Chatra is a district in the state of Jharkhand, India. It was formed in 1991 and is part of the larger Chatra division. The district is predominantly rural, with agriculture being the mainstay of the economy. Key crops include paddy, wheat, and various pulses.\nGeographically, Chatra features hilly terrain and is situated in the eastern part of India, bordered by several other districts in Jharkhand. The district is home to various tribal communities, contributing to its cultural diversity. Key towns in the district include Chatra, which serves as the administrative headquarters.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 24.2050181,
+      "longitude": 84.8710824,
+      "address": {
+        "city": "Chatra",
+        "state": "Jharkhand ",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-002",
+    "name": "Sadar Hospital Latehar",
+    "description": "Latehar is a district in the state of Jharkhand, India, formed in 2001. It is located in the central part of the state and is known for its rich natural resources, including minerals and forests. The district is characterized by hilly terrain and a significant tribal population, which contributes to its cultural diversity.\nThe economy of Latehar is primarily agrarian, with agriculture being the main source of livelihood. Key crops include paddy, wheat, and various pulses. Additionally, the district has resources such as coal and iron ore, which play a role in its economic development.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.7433041,
+      "longitude": 84.5081726,
+      "address": {
+        "city": "Latehar",
+        "state": "Jharkhand ",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-003",
+    "name": "Sadar Hospital Khunti",
+    "description": "Khunti is a district in the state of Jharkhand, India, established in 2001. It is situated in the southern part of the state and is known for its rich tribal culture and heritage. The district is predominantly inhabited by various tribal communities, including the Mundas, Oraons, and Santhals, which contribute to its vibrant cultural landscape.\nThe economy of Khunti is primarily agricultural, with rice, maize, and pulses being the main crops. The region is also rich in natural resources, including forests that provide timber and non-timber forest products, supporting local livelihoods.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.05863221,
+      "longitude": 85.28339356,
+      "address": {
+        "city": "Khunti",
+        "state": "Jharkhand ",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-004",
+    "name": "Sadar Hospital Gumla",
+    "description": "Gumla is a district in the state of Jharkhand, India, established in 1991. Located in the southern part of the state, it is known for its diverse tribal population and rich cultural heritage. The district is primarily rural, with agriculture as the mainstay of the economy. Key crops include paddy, wheat, and various pulses.\nGumla features a varied landscape, including hills, forests, and rivers, which contribute to its natural beauty. The district is home to several important wildlife sanctuaries, providing opportunities for eco-tourism and conservation efforts.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.0351509,
+      "longitude": 84.5379982,
+      "address": {
+        "city": "Gumla",
+        "state": "Jharkhand ",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  },
+  {
+    "id": "10bed-jharkhand-005",
+    "name": "Sadar Hospital Ranchi",
+    "description": "Ranchi is the capital city of Jharkhand, India, and serves as the administrative and political center of the State. Nestled in the Chotanagpur Plateau, Ranchi is known for its scenic landscapes, including hills, waterfalls, and lush greenery. The city has a rich cultural heritage, influenced by various tribal communities and their traditions.\nEconomically, Ranchi is a significant hub, with industries ranging from mining and manufacturing to information technology and education. It is home to several prominent institutions, including Indian School of Mines (ISM) and Ranchi University.\nThe city is also known for its pleasant climate, making it a popular destination for tourists. Key attractions include the beautiful Dassam Falls, Hundru Falls, and various parks and gardens. Ranchi hosts numerous festivals, reflecting its diverse cultural fabric.",
+    "program": "10bedicu",
+    "location": {
+      "latitude": 23.369528127642553,
+      "longitude": 85.32575875392958,
+      "address": {
+        "city": "Ranchi",
+        "state": "Jharkhand ",
+        "country": "India"
+      }
+    },
+    "dateDeployed": null,
+    "status": "active"
+  }
+]
+}

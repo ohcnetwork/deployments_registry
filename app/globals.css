@@ -1,0 +1,425 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Mobile viewport height fix - handles dynamic address bars */
+:root {
+  /* Fallback for browsers that don't support dvh */
+  --vh: 1vh;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    /* Use dynamic viewport height when available (iOS 15.4+, Chrome 108+) */
+    --vh: 1dvh;
+  }
+}
+
+/* Safe area insets for notched devices */
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
+}
+
+/* Galaxy/Starfield Background */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add starfield to map container */
+.maplibregl-map {
+  position: relative;
+}
+
+.maplibregl-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    /* Large bright stars */
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(2px 2px at 75% 25%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 15% 85%, white, transparent),
+    radial-gradient(2px 2px at 85% 15%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 40% 90%, white, transparent),
+    radial-gradient(2px 2px at 95% 40%, rgba(255, 255, 255, 0.8), transparent),
+    /* Medium stars - scattered everywhere */
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(1px 1px at 33% 80%, white, transparent),
+    radial-gradient(1px 1px at 15% 90%, white, transparent),
+    radial-gradient(1px 1px at 45% 15%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 25% 45%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 70% 55%, white, transparent),
+    radial-gradient(1px 1px at 10% 60%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 88% 75%, white, transparent),
+    radial-gradient(1px 1px at 55% 35%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 30% 20%, white, transparent),
+    radial-gradient(1px 1px at 65% 85%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 92% 28%, white, transparent),
+    radial-gradient(1px 1px at 48% 68%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 12% 42%, white, transparent),
+    radial-gradient(1px 1px at 78% 92%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 35% 5%, white, transparent),
+    radial-gradient(1px 1px at 5% 25%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 62% 12%, white, transparent),
+    radial-gradient(1px 1px at 82% 48%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 18% 72%, white, transparent),
+    radial-gradient(1px 1px at 97% 8%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 42% 58%, white, transparent),
+    radial-gradient(1px 1px at 28% 95%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 72% 38%, white, transparent),
+    radial-gradient(1px 1px at 52% 78%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 8% 52%, white, transparent),
+    radial-gradient(1px 1px at 68% 22%, rgba(255, 255, 255, 0.7), transparent),
+    /* Tiny distant stars */
+    radial-gradient(1px 1px at 22% 62%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 58% 88%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 38% 32%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 75% 65%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 14% 18%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 86% 82%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 44% 44%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 96% 52%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 4% 76%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 64% 8%, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                   200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%;
+  background-position: 0% 0%, 100% 100%, 50% 50%, 20% 80%, 80% 20%,
+                       40% 60%, 60% 40%, 10% 90%, 90% 10%, 70% 30%,
+                       30% 70%, 85% 55%, 25% 15%, 55% 85%, 15% 45%,
+                       75% 75%, 45% 25%, 5% 65%, 95% 35%, 35% 95%,
+                       65% 5%, 50% 80%, 80% 50%, 20% 20%, 90% 90%,
+                       40% 10%, 10% 40%, 60% 60%, 30% 30%, 70% 70%,
+                       50% 10%, 10% 50%, 90% 70%, 70% 90%, 20% 50%,
+                       50% 20%, 80% 80%, 40% 40%, 60% 30%, 30% 60%,
+                       15% 75%, 75% 15%, 25% 85%, 85% 25%, 45% 55%;
+  animation: twinkle 3s ease-in-out infinite alternate;
+  opacity: 0.7;
+}
+
+/* Dark mode - deeper space */
+.dark .maplibregl-map::before {
+  opacity: 0.9;
+  background-image: 
+    /* Large bright stars with colors */
+    radial-gradient(3px 3px at 20% 30%, rgba(255, 255, 255, 1), transparent),
+    radial-gradient(2px 2px at 60% 70%, rgba(200, 220, 255, 0.9), transparent),
+    radial-gradient(3px 3px at 90% 60%, rgba(255, 255, 255, 1), transparent),
+    radial-gradient(2px 2px at 75% 25%, rgba(255, 220, 200, 0.9), transparent),
+    radial-gradient(3px 3px at 15% 85%, rgba(255, 255, 255, 1), transparent),
+    radial-gradient(2px 2px at 85% 15%, rgba(220, 200, 255, 0.9), transparent),
+    radial-gradient(3px 3px at 40% 90%, rgba(255, 255, 255, 1), transparent),
+    radial-gradient(2px 2px at 95% 40%, rgba(200, 255, 255, 0.9), transparent),
+    /* Medium bright stars */
+    radial-gradient(2px 2px at 50% 50%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 80% 10%, rgba(255, 200, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 33% 80%, rgba(200, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 15% 90%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 45% 15%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 25% 45%, rgba(200, 220, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 70% 55%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 10% 60%, rgba(255, 220, 200, 0.7), transparent),
+    radial-gradient(2px 2px at 88% 75%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 55% 35%, rgba(220, 200, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 30% 20%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 65% 85%, rgba(200, 255, 255, 0.7), transparent),
+    /* More medium stars */
+    radial-gradient(1px 1px at 92% 28%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 48% 68%, rgba(255, 220, 220, 0.7), transparent),
+    radial-gradient(1px 1px at 12% 42%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 78% 92%, rgba(220, 220, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 35% 5%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 5% 25%, rgba(255, 240, 200, 0.7), transparent),
+    radial-gradient(1px 1px at 62% 12%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 82% 48%, rgba(200, 220, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 18% 72%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 97% 8%, rgba(255, 220, 255, 0.7), transparent),
+    /* Small stars scattered everywhere */
+    radial-gradient(1px 1px at 42% 58%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 28% 95%, rgba(220, 240, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 72% 38%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 52% 78%, rgba(255, 220, 220, 0.6), transparent),
+    radial-gradient(1px 1px at 8% 52%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 68% 22%, rgba(220, 220, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 22% 62%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 58% 88%, rgba(200, 255, 240, 0.6), transparent),
+    radial-gradient(1px 1px at 38% 32%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 75% 65%, rgba(255, 230, 200, 0.6), transparent),
+    /* Tiny distant stars */
+    radial-gradient(1px 1px at 14% 18%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 86% 82%, rgba(220, 230, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 44% 44%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 96% 52%, rgba(255, 220, 230, 0.5), transparent),
+    radial-gradient(1px 1px at 4% 76%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 64% 8%, rgba(230, 230, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 36% 96%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 54% 24%, rgba(255, 240, 220, 0.5), transparent),
+    radial-gradient(1px 1px at 26% 54%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 84% 36%, rgba(220, 240, 255, 0.5), transparent),
+    /* Extra tiny stars for density */
+    radial-gradient(1px 1px at 16% 46%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 76% 16%, rgba(240, 240, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 46% 76%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 94% 66%, rgba(255, 240, 240, 0.4), transparent),
+    radial-gradient(1px 1px at 6% 86%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 66% 6%, rgba(240, 255, 240, 0.4), transparent);
+}
+
+/* Nebula-like glow effect */
+.maplibregl-canvas-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(210, 135, 60, 0.198) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255, 172, 100, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(255, 175, 100, 0.145) 0%, transparent 30%);
+  animation: rotate-slow 120s linear infinite;
+  opacity: 0.4;
+}
+
+.dark .maplibregl-canvas-container::before {
+  opacity: 0.6;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(100, 150, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255, 100, 200, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(150, 100, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 20% 70%, rgba(100, 255, 200, 0.08) 0%, transparent 25%);
+}
+
+/* Map marker animations */
+@keyframes markerBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-5px);
+  }
+  80% {
+    transform: scale(0.95) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.deployment-marker,
+.cluster-marker {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  cursor: pointer;
+  position: relative;
+}
+
+.deployment-marker:hover,
+.cluster-marker:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+  z-index: 1000;
+}
+
+.deployment-marker:active,
+.cluster-marker:active {
+  transform: scale(0.95);
+}
+
+/* Smooth map transitions */
+.maplibregl-canvas {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.maplibregl-map {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhance globe atmosphere effect */
+.maplibregl-map {
+  background: radial-gradient(circle at center, rgba(255, 169, 30, 0.474) 0%, rgba(77, 204, 227, 0.741) 100%);
+}
+
+.dark .maplibregl-map {
+  background: radial-gradient(circle at center, rgba(10, 20, 40, 0.5) 0%, rgba(0, 0, 0, 0.95) 100%);
+}
