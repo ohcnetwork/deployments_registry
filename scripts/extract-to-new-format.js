@@ -64,6 +64,21 @@ function parseDate(raw) {
   let s = raw.trim();
   if (!s || /^(tbd|na|n\/a)$/i.test(s)) return null;
   
+  // Format: D-Mon-YYYY (e.g., "7-Jan-2022")
+  const m4 = s.match(/^(\d{1,2})[-\s]+([A-Za-z]{3,})[-\s]+(\d{4})$/);
+  if (m4) {
+    const monthNames = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+    const monthAbbrev = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+    let [_, d, mon, y] = m4;
+    let mi = monthNames.indexOf(mon.toLowerCase());
+    if (mi === -1) {
+      mi = monthAbbrev.indexOf(mon.toLowerCase().slice(0, 3));
+    }
+    if (mi !== -1) {
+      return `${y}-${String(mi+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    }
+  }
+  
   // Format: DD/MM/YYYY or DD/MM/YY
   const m1 = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
   if (m1) {
@@ -136,7 +151,8 @@ function extractCityName(district, hospitalName) {
 }
 
 function transformRecord(record, stateCounter) {
-  const state = (record.state || '').toString().toLowerCase();
+  // Support both old format (state, district) and new format (state_key, district_key)
+  const state = ((record.state_key || record.state) || '').toString().toLowerCase();
   const sanitizedState = sanitize(state);
   
   // Generate ID: "10bed-{state}-{number}"
@@ -145,8 +161,9 @@ function transformRecord(record, stateCounter) {
   const id = `10bed-${sanitizedState}-${number}`;
   stateCounter.set(state, counter + 1);
   
-  // Extract fields
-  const name = record.hospital_name || record.district || 'Unknown Hospital';
+  // Extract fields - support both old and new field names
+  const district = record.district_key || record.district || '';
+  const name = record.hospital_name || district || 'Unknown Hospital';
   const description = record.summary || '';
   const latitude = record.latitude ? parseFloat(record.latitude) : null;
   const longitude = record.longitude ? parseFloat(record.longitude) : null;
@@ -154,7 +171,7 @@ function transformRecord(record, stateCounter) {
   const status = mapStatus(record.status);
   
   // Extract city from district or hospital name
-  const city = extractCityName(record.district, record.hospital_name);
+  const city = extractCityName(district, record.hospital_name);
   const stateFormatted = state ? state.split(' ').map(word => capitalizeFirst(word)).join(' ') : '';
   
   return {
@@ -209,8 +226,9 @@ function main() {
   const transformed = [];
   
   for (const record of rawData) {
-    // Skip records without state
-    if (!record.state) {
+    // Skip records without state (support both old and new field names)
+    const state = record.state_key || record.state;
+    if (!state) {
       console.warn(`Skipping record without state: ${record.hospital_name || 'Unknown'}`);
       continue;
     }
