@@ -17,9 +17,9 @@ import type {
   DeploymentData,
   ProgramType,
 } from "@/types/deployment";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 
 const ALL_PROGRAMS: ProgramType[] = [
   "10bedicu",
@@ -45,9 +45,16 @@ export default function Home() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
   const [showLabels, setShowLabels] = useState(false);
-  const [enableClustering, setEnableClustering] = useState(
-    config.enableClusteringByDefault
-  );
+  const [enableClustering, setEnableClustering] = useState(() => {
+    // Load from localStorage if available, otherwise use config default
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("enableClustering");
+      if (saved !== null) {
+        return saved === "true";
+      }
+    }
+    return config.enableClusteringByDefault;
+  });
 
   // Debounce search input - only update searchQuery after 400ms of no typing
   // Exception: Clear search immediately when input is empty (0ms delay)
@@ -66,6 +73,13 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, [searchInput, searchQuery]);
+
+  // Persist clustering state to localStorage
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("enableClustering", String(enableClustering));
+    }
+  }, [enableClustering]);
 
   // Memoize stats calculation to avoid recalculating on every render
   const stats = useMemo(() => calculateStats(data), [data]);
@@ -111,10 +125,52 @@ export default function Home() {
     setIsFilterOpen(false);
   };
 
-  const handleClosePopup = () => {
+  const handleClosePopup = useCallback(() => {
     setSelectedDeployment(null);
     setHighlightedDeploymentId(null);
-  };
+  }, []);
+
+  // Navigation functions for previous/next deployment in filtered list
+  const currentDeploymentIndex = useMemo(() => {
+    if (!selectedDeployment) return -1;
+    return filteredDeployments.findIndex((d) => d.id === selectedDeployment.id);
+  }, [selectedDeployment, filteredDeployments]);
+
+  const handlePreviousDeployment = useCallback(() => {
+    if (currentDeploymentIndex <= 0) return;
+    const prevDeployment = filteredDeployments[currentDeploymentIndex - 1];
+    handleDeploymentClick(prevDeployment);
+  }, [currentDeploymentIndex, filteredDeployments]);
+
+  const handleNextDeployment = useCallback(() => {
+    if (currentDeploymentIndex >= filteredDeployments.length - 1) return;
+    const nextDeployment = filteredDeployments[currentDeploymentIndex + 1];
+    handleDeploymentClick(nextDeployment);
+  }, [currentDeploymentIndex, filteredDeployments]);
+
+  const hasPrevious = currentDeploymentIndex > 0;
+  const hasNext = currentDeploymentIndex < filteredDeployments.length - 1;
+
+  // Keyboard navigation for previous/next deployment
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedDeployment) return;
+      
+      if (e.key === "ArrowLeft" && hasPrevious) {
+        e.preventDefault();
+        handlePreviousDeployment();
+      } else if (e.key === "ArrowRight" && hasNext) {
+        e.preventDefault();
+        handleNextDeployment();
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        handleClosePopup();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedDeployment, hasPrevious, hasNext, handlePreviousDeployment, handleNextDeployment, handleClosePopup]);
 
   const FilterPanel = (
     <DeploymentFilters
@@ -248,12 +304,46 @@ export default function Home() {
                 className="absolute inset-0 z-10"
                 onClick={handleClosePopup}
               />
+              
+              {/* Navigation Buttons - Bottom Center */}
+              {(hasPrevious || hasNext) && (
+                <div
+                  className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 gap-3"
+                  style={{
+                    paddingBottom: "max(1rem, calc(1rem + var(--safe-area-inset-bottom)))",
+                  }}
+                >
+                  {hasPrevious && (
+                    <Button
+                      size="icon"
+                      variant="default"
+                      className="h-12 w-12 rounded-full shadow-lg"
+                      onClick={handlePreviousDeployment}
+                      title="Previous location"
+                    >
+                      <ChevronLeft className="h-6 w-6" />
+                    </Button>
+                  )}
+                  {hasNext && (
+                    <Button
+                      size="icon"
+                      variant="default"
+                      className="h-12 w-12 rounded-full shadow-lg"
+                      onClick={handleNextDeployment}
+                      title="Next location"
+                    >
+                      <ChevronRight className="h-6 w-6" />
+                    </Button>
+                  )}
+                </div>
+              )}
+
               {/* Mobile: bottom-positioned with safe area, Desktop: top-right */}
               <div
-                className="absolute bottom-0 left-0 right-0 z-20 px-4 pb-4 sm:bottom-auto sm:left-auto sm:right-4 sm:top-4 sm:max-w-md"
+                className="absolute bottom-0 left-0 right-0 z-20 px-4 sm:bottom-auto sm:left-auto sm:right-4 sm:top-4 sm:max-w-md"
                 style={{
                   paddingBottom:
-                    "max(1rem, calc(1rem + var(--safe-area-inset-bottom)))",
+                    "max(4.5rem, calc(4.5rem + var(--safe-area-inset-bottom)))", // Extra space for navigation buttons on mobile
                   paddingLeft:
                     "max(1rem, calc(1rem + var(--safe-area-inset-left)))",
                   paddingRight:
