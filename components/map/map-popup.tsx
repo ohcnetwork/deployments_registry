@@ -35,7 +35,7 @@ export function MapPopup({ deployment }: MapPopupProps) {
               )}
             </CardTitle>
             <CardDescription className="mt-1 flex items-center gap-1 text-sm">
-              <MapPin className="h-3 w-3" />
+              <MapPin className="size-3 shrink-0" />
               {deployment.location.address
                 ? `${deployment.location.address.city}, ${deployment.location.address.country}`
                 : `${deployment.location.latitude.toFixed(
@@ -43,14 +43,17 @@ export function MapPopup({ deployment }: MapPopupProps) {
                   )}, ${deployment.location.longitude.toFixed(4)}`}
             </CardDescription>
           </div>
-          <Badge
-            style={{
-              backgroundColor: PROGRAM_COLORS[deployment.program],
-              color: "white",
-            }}
-          >
-            {PROGRAM_LABELS[deployment.program]}
-          </Badge>
+          <div className="flex flex-col gap-2">
+            <Badge
+              style={{
+                backgroundColor: PROGRAM_COLORS[deployment.program],
+                color: "white",
+              }}
+            >
+              {PROGRAM_LABELS[deployment.program]}
+            </Badge>
+            <Badge className="capitalize">{deployment.status || "unknown"}</Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="space-y-1">

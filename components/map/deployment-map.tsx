@@ -301,9 +301,8 @@ export function DeploymentMap({
     markers.current = [];
     markerElementsMap.current.clear();
 
-    // Create supercluster index only if clustering is enabled AND intro animation is complete
-    // During intro, we want to show all individual markers for the animation effect
-    const cluster = enableClustering && introAnimationComplete
+    // Create supercluster index only if clustering is enabled
+    const cluster = enableClustering
       ? new Supercluster<Deployment>({
           radius: 60,
           maxZoom: 16,
@@ -334,10 +333,9 @@ export function DeploymentMap({
       const bounds = map.current.getBounds();
       const zoom = map.current.getZoom();
 
-      // Get clusters or individual points based on enableClustering and intro state
-      // During intro animation, always show individual markers for animation effect
+      // Get clusters or individual points based on enableClustering
       const clusters =
-        enableClustering && cluster && introAnimationComplete
+        enableClustering && cluster
           ? cluster.getClusters(
               [
                 bounds.getWest(),
@@ -347,7 +345,7 @@ export function DeploymentMap({
               ],
               Math.floor(zoom)
             )
-          : features; // If clustering disabled or intro not complete, show all features
+          : features; // If clustering disabled, show all features
 
       // Clear existing markers
       markers.current.forEach((marker) => marker.remove());
@@ -446,12 +444,10 @@ export function DeploymentMap({
             }
 
             // Set initial state BEFORE adding to map
-            data.element.style.opacity = "0";
-            data.element.style.transform = "scale(0)";
-            data.element.style.transition =
-              "all 1.2s cubic-bezier(0.22, 1, 0.36, 1)";
-            data.element.style.willChange = "transform, opacity";
-            data.element.style.transformOrigin = "center center";
+            // data.element.style.opacity = "0";
+            // data.element.style.transform = "scale(0)";
+            // data.element.style.willChange = "transform, opacity";
+            // data.element.style.transformOrigin = "center center";
 
             // Add to map with styles already applied
             const marker = new maplibregl.Marker({ element: data.element })
@@ -530,10 +526,6 @@ export function DeploymentMap({
       if (pinSvg) {
         pinSvg.remove();
       }
-      element.style.transform = "scale(1)";
-      element.style.zIndex = "0";
-      element.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
-      element.style.transition = "transform 0.8s ease, box-shadow 0.5s ease";
     });
 
     // Highlight the selected marker with map pin icon overlay
@@ -557,9 +549,7 @@ export function DeploymentMap({
         `;
 
         element.appendChild(pinSvg);
-        element.style.transform = "scale(1.2)";
-        element.style.zIndex = "100";
-        element.style.transition = "all 0.7s ease";
+        element.style.transform = "scale(2)";
       }
     }
   }, [highlightedDeploymentId, introAnimationComplete]);
