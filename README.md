@@ -4,7 +4,7 @@ A global, open-source registry that visualizes deployments on an interactive map
 
 ## Features
 
-- 🗺️ **Interactive Map**: Powered by MapLibre GL JS with Maptiler tiles
+- 🗺️ **Interactive Map**: Powered by MapLibre GL JS with [openfreemap](https://openfreemap.org/) tiles
 - 🌓 **Dark Mode**: Seamless theme switching with next-themes
 - 🔍 **Search & Filter**: Find deployments by name or filter by program type
 - 📍 **Smart Clustering**: Automatic marker clustering using supercluster
@@ -16,8 +16,7 @@ A global, open-source registry that visualizes deployments on an interactive map
 
 ### Prerequisites
 
-- Node.js 18+ and pnpm
-- Maptiler API key (free tier: https://cloud.maptiler.com/)
+- Node.js 22+ and pnpm
 
 ### Installation
 
@@ -37,9 +36,8 @@ pnpm install
 cp .env.example .env.local
 ```
 
-Edit `.env.local` and add your Maptiler API key and white-label configuration:
+Edit `.env.local` and add your white-label configuration:
 ```env
-NEXT_PUBLIC_MAPTILER_API_KEY=your_maptiler_api_key_here
 NEXT_PUBLIC_APP_NAME=Your Deployments Registry
 NEXT_PUBLIC_APP_DESCRIPTION=Your description
 NEXT_PUBLIC_ORGANIZATION_NAME=Your Organization
@@ -97,7 +95,7 @@ The application can be white-labeled through environment variables:
 ## Tech Stack
 
 - **Framework**: Next.js 16 with App Router
-- **Mapping**: MapLibre GL JS + Maptiler
+- **Mapping**: MapLibre GL JS + openfreemap tiles
 - **UI**: shadcn/ui + Tailwind CSS
 - **Theme**: next-themes
 - **Clustering**: supercluster

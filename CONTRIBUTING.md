@@ -86,13 +86,7 @@ Feature requests are welcome! Please:
    cp .env.example .env.local
    ```
 
-2. Get a Maptiler API key:
-   - Visit https://cloud.maptiler.com/
-   - Create a free account
-   - Generate an API key
-   - Add to `.env.local`
-
-3. Start development server:
+2. Start development server:
    ```bash
    pnpm dev
    ```

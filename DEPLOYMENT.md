@@ -2,27 +2,20 @@
 
 ## Quick Start
 
-1. **Get a Maptiler API Key** (Free tier: 100k requests/month)
-   - Visit https://cloud.maptiler.com/
-   - Sign up for a free account
-   - Create an API key
-   - Copy the key
-
-2. **Configure Environment Variables**
+1. **Configure Environment Variables**
    ```bash
    cp .env.example .env.local
    ```
    
    Edit `.env.local`:
    ```env
-   NEXT_PUBLIC_MAPTILER_API_KEY=your_actual_key_here
    NEXT_PUBLIC_APP_NAME=Healthcare Deployments Registry
    NEXT_PUBLIC_APP_DESCRIPTION=Global registry of healthcare deployments
    NEXT_PUBLIC_ORGANIZATION_NAME=Open Healthcare Network
    NEXT_PUBLIC_ORGANIZATION_URL=https://ohc.network
    ```
 
-3. **Build and Deploy**
+2. **Build and Deploy**
    ```bash
    pnpm install
    pnpm build
@@ -86,7 +79,6 @@ jobs:
       - run: pnpm install
       - run: pnpm build
         env:
-          NEXT_PUBLIC_MAPTILER_API_KEY: ${{ secrets.MAPTILER_API_KEY }}
           NEXT_PUBLIC_APP_NAME: ${{ vars.APP_NAME }}
           NEXT_PUBLIC_APP_DESCRIPTION: ${{ vars.APP_DESCRIPTION }}
           NEXT_PUBLIC_ORGANIZATION_NAME: ${{ vars.ORGANIZATION_NAME }}
@@ -99,7 +91,6 @@ jobs:
 
 2. Add secrets and variables in GitHub:
    - Settings → Secrets and variables → Actions
-   - Add `MAPTILER_API_KEY` as secret
    - Add other variables
 
 ### Self-hosted (Nginx/Apache)
@@ -175,8 +166,7 @@ pnpm build
 ## Troubleshooting
 
 ### Map doesn't load
-- Check that `NEXT_PUBLIC_MAPTILER_API_KEY` is set correctly
-- Verify the API key is valid at https://cloud.maptiler.com/
+- Check network logs for any error loading tiles from https://openfreemap.org/
 - Check browser console for errors
 
 ### Build fails
@@ -206,6 +196,4 @@ For large datasets (100+ deployments):
 ## Security Notes
 
 - Never commit `.env.local` to git (it's in .gitignore)
-- Maptiler API key is exposed in client-side code (by design for static sites)
-- Use Maptiler's free tier restrictions to prevent abuse
 - Consider using environment-specific API keys for dev/production

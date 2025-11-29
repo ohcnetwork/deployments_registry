@@ -7,7 +7,6 @@
  */
 
 export interface AppConfig {
-  maptilerApiKey: string;
   appName: string;
   appDescription: string;
   organizationName: string;
@@ -17,7 +16,6 @@ export interface AppConfig {
 }
 
 export const config: AppConfig = {
-  maptilerApiKey: process.env.NEXT_PUBLIC_MAPTILER_API_KEY || "",
   appName: process.env.NEXT_PUBLIC_APP_NAME || "Care Deployments Registry",
   appDescription:
     process.env.NEXT_PUBLIC_APP_DESCRIPTION ||

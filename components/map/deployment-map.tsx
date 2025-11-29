@@ -1,6 +1,5 @@
 "use client";
 
-import { config } from "@/lib/config";
 import {
   PROGRAM_COLORS,
   createClusterMarkerElement,
@@ -122,8 +121,8 @@ export function DeploymentMap({
 
     const isDark = resolvedTheme === "dark";
     const mapStyle = isDark
-      ? `https://api.maptiler.com/maps/streets-v2-dark/style.json?key=${config.maptilerApiKey}`
-      : `https://api.maptiler.com/maps/streets-v2/style.json?key=${config.maptilerApiKey}`;
+      ? `https://tiles.openfreemap.org/styles/fiord`
+      : `https://tiles.openfreemap.org/styles/positron`;
 
     // Always start with globe view for animation
     // Start 360° before India's longitude so we can spin and land perfectly on India
@@ -213,8 +212,8 @@ export function DeploymentMap({
 
     const isDark = resolvedTheme === "dark";
     const mapStyle = isDark
-      ? `https://api.maptiler.com/maps/streets-v2-dark/style.json?key=${config.maptilerApiKey}`
-      : `https://api.maptiler.com/maps/streets-v2/style.json?key=${config.maptilerApiKey}`;
+      ? `https://tiles.openfreemap.org/styles/fiord`
+      : `https://tiles.openfreemap.org/styles/positron`;
 
     map.current.setStyle(mapStyle);
 
