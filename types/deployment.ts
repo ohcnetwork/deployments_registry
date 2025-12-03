@@ -2,7 +2,7 @@
  * TypeScript types for deployment data
  */
 
-export type ProgramType = "10bedicu" | "kerala-care" | "palliative-ngo" | "hmis";
+export type ProgramType = "10bedicu" | "keralacare" | "palliative-ngo" | "hmis";
 
 export interface Address {
   street?: string;

@@ -6,7 +6,7 @@ import type { ProgramType } from "@/types/deployment";
  */
 export const PROGRAM_COLORS: Record<ProgramType, string> = {
   "10bedicu": "#3B82F6", // Blue
-  "kerala-care": "#10B981", // Green
+  keralacare: "#10B981", // Green
   "palliative-ngo": "#A855F7", // Purple
   hmis: "#F59E0B", // Orange
 };
@@ -16,7 +16,7 @@ export const PROGRAM_COLORS: Record<ProgramType, string> = {
  */
 export const PROGRAM_LABELS: Record<ProgramType, string> = {
   "10bedicu": "10 Bed ICU",
-  "kerala-care": "Kerala Care",
+  keralacare: "Kerala Care",
   "palliative-ngo": "Palliative NGO",
   hmis: "HMIS",
 };

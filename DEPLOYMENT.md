@@ -186,7 +186,7 @@ pnpm build
 
 ### Markers don't appear
 - Verify latitude/longitude coordinates are correct
-- Check that `program` field matches one of: `10bedicu`, `kerala-care`, `palliative-ngo`, `hmis`
+- Check that `program` field matches one of: `10bedicu`, `keralacare`, `palliative-ngo`, `hmis`
 - Ensure deployments.json is in `public/` directory
 
 ## Performance Optimization

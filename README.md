@@ -70,7 +70,7 @@ Deployment data is stored in `public/deployments.json`. Each deployment has:
   "id": "unique-id",
   "name": "Deployment Name",
   "description": "Description",
-  "program": "10bedicu" | "kerala-care" | "palliative-ngo" | "hmis",
+  "program": "10bedicu" | "keralacare" | "palliative-ngo" | "hmis",
   "location": {
     "latitude": 0.0,
     "longitude": 0.0,

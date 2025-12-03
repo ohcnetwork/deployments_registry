@@ -154,7 +154,7 @@ deployments_registry/
 
 1. Update `types/deployment.ts`:
    ```typescript
-   export type ProgramType = "10bedicu" | "kerala-care" | "palliative-ngo" | "hmis" | "new-program";
+   export type ProgramType = "10bedicu" | "keralacare" | "palliative-ngo" | "hmis" | "new-program";
    ```
 
 2. Update `lib/map-utils.ts`:

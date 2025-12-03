@@ -17,13 +17,13 @@ import type {
   DeploymentData,
   ProgramType,
 } from "@/types/deployment";
-import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 const ALL_PROGRAMS: ProgramType[] = [
   "10bedicu",
-  "kerala-care",
+  "keralacare",
   "palliative-ngo",
   "hmis",
 ];
@@ -155,7 +155,7 @@ export default function Home() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!selectedDeployment) return;
-      
+
       if (e.key === "ArrowLeft" && hasPrevious) {
         e.preventDefault();
         handlePreviousDeployment();
@@ -170,7 +170,14 @@ export default function Home() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedDeployment, hasPrevious, hasNext, handlePreviousDeployment, handleNextDeployment, handleClosePopup]);
+  }, [
+    selectedDeployment,
+    hasPrevious,
+    hasNext,
+    handlePreviousDeployment,
+    handleNextDeployment,
+    handleClosePopup,
+  ]);
 
   const FilterPanel = (
     <DeploymentFilters
@@ -304,13 +311,14 @@ export default function Home() {
                 className="absolute inset-0 z-10"
                 onClick={handleClosePopup}
               />
-              
+
               {/* Navigation Buttons - Bottom Center */}
               {(hasPrevious || hasNext) && (
                 <div
                   className="absolute bottom-4 left-1/2 z-30 flex -translate-x-1/2 gap-3"
                   style={{
-                    paddingBottom: "max(1rem, calc(1rem + var(--safe-area-inset-bottom)))",
+                    paddingBottom:
+                      "max(1rem, calc(1rem + var(--safe-area-inset-bottom)))",
                   }}
                 >
                   {hasPrevious && (

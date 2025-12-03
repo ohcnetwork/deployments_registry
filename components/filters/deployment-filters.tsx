@@ -40,7 +40,7 @@ interface DeploymentFiltersProps {
 
 const PROGRAMS: ProgramType[] = [
   "10bedicu",
-  "kerala-care",
+  "keralacare",
   "palliative-ngo",
   "hmis",
 ];
