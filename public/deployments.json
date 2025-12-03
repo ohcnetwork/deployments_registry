@@ -5698,23 +5698,6 @@
       "status": "active"
     },
     {
-      "id": "keralacare-309",
-      "name": "FHC VAPPALA",
-      "description": "",
-      "program": "keralacare",
-      "location": {
-        "latitude": 17.406498,
-        "longitude": 78.4772439,
-        "address": {
-          "city": "VeliyamgramaPanchayat, Odanavattom P O 691512",
-          "state": "Kerala",
-          "country": "India"
-        }
-      },
-      "dateDeployed": "2025-08-22",
-      "status": "active"
-    },
-    {
       "id": "keralacare-316",
       "name": "Thriprangottur",
       "description": "",
@@ -10501,23 +10484,6 @@
         "longitude": 76.29937642,
         "address": {
           "city": "Primary Health Centre, Kadakkarappally,Kadakkarappally P.O PIN 688529",
-          "state": "Kerala",
-          "country": "India"
-        }
-      },
-      "dateDeployed": "2025-08-22",
-      "status": "active"
-    },
-    {
-      "id": "keralacare-1052",
-      "name": "PHC Thenkara",
-      "description": "",
-      "program": "keralacare",
-      "location": {
-        "latitude": 17.09402643,
-        "longitude": 75.40659869,
-        "address": {
-          "city": "PHC Thenkara , Thenkara PO",
           "state": "Kerala",
           "country": "India"
         }
@@ -16264,23 +16230,6 @@
         "longitude": 75.90158832,
         "address": {
           "city": "Family Health Centre, Valavil, vazhayoor East P. O, Malappuram",
-          "state": "Kerala",
-          "country": "India"
-        }
-      },
-      "dateDeployed": "2025-08-22",
-      "status": "active"
-    },
-    {
-      "id": "keralacare-204",
-      "name": "CHC KANJEETUKARA",
-      "description": "",
-      "program": "keralacare",
-      "location": {
-        "latitude": 12.9859584,
-        "longitude": 77.6798208,
-        "address": {
-          "city": "CHC KANJEETUKARA,AYROOR KADHAKALI GRAMAM P.O,AYROOR,PATHANAMTHITTA-689611",
           "state": "Kerala",
           "country": "India"
         }
