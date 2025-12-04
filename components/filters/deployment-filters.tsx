@@ -108,12 +108,12 @@ export function DeploymentFilters({
                 />
               </div>
 
-              <div className="max-h-[300px] space-y-1 overflow-y-auto pr-1">
+              <div className="max-h-[300px] space-y-1 overflow-auto pr-1">
                 {filteredDeployments.map((deployment) => (
                   <button
                     key={deployment.id}
                     onClick={() => onDeploymentClick?.(deployment)}
-                    className={`w-full rounded-md border p-3 text-left transition-colors hover:bg-accent hover:border-primary ${
+                    className={`w-full overflow-hidden rounded-md border p-3 text-left transition-colors hover:bg-accent hover:border-primary ${
                       highlightedDeploymentId === deployment.id
                         ? "bg-accent border-primary ring-2 ring-primary"
                         : ""

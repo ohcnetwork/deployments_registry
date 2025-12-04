@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -20,63 +21,51 @@ interface MapPopupProps {
 
 export function MapPopup({ deployment }: MapPopupProps) {
   return (
-    <Card className="w-full max-w-md min-w-60 border-2 py-4 gap-2">
-      <CardHeader className="pb-0">
-        <div className="flex items-start justify-between gap-2">
-          <div className="flex-1">
-            <CardTitle className="text-lg">
-              {deployment.name}{" "}
-              {deployment.website && (
-                <Button variant="ghost" size="sm" asChild>
-                  <a href={deployment.website} target="_blank">
-                    <ExternalLink />
-                  </a>
-                </Button>
-              )}
-            </CardTitle>
-            <CardDescription className="mt-1 flex items-center gap-1 text-sm">
-              <MapPin className="size-3 shrink-0" />
-              {deployment.location.address
-                ? `${deployment.location.address.city}, ${deployment.location.address.country}`
-                : `${deployment.location.latitude.toFixed(
-                    4
-                  )}, ${deployment.location.longitude.toFixed(4)}`}
-            </CardDescription>
-          </div>
-          <div className="flex flex-col gap-2">
-            <Badge
-              style={{
-                backgroundColor: PROGRAM_COLORS[deployment.program],
-                color: "white",
-              }}
-            >
-              {PROGRAM_LABELS[deployment.program]}
-            </Badge>
-            <Badge className="capitalize">{deployment.status || "unknown"}</Badge>
-          </div>
-        </div>
+    <Card className="w-full max-w-md">
+      <CardHeader>
+        <CardTitle>{deployment.name}</CardTitle>
+        <CardDescription>
+          <MapPin className="size-3 shrink-0 inline mr-2" />
+          {deployment.location.address
+            ? `${deployment.location.address.city}, ${deployment.location.address.state}, ${deployment.location.address.country}`
+            : `${deployment.location.latitude.toFixed(
+                4
+              )}, ${deployment.location.longitude.toFixed(4)}`}
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-1">
         <p className="text-sm text-muted-foreground line-clamp-3 md:line-clamp-none">
           {deployment.description}
         </p>
-
-        <div className="flex flex-wrap gap-3 text-sm">
+      </CardContent>
+      <CardFooter className="sm:flex-row flex-col gap-2">
+        <div className="flex gap-2">
           {deployment.dateDeployed && (
-            <div className="flex items-center gap-1.5 text-muted-foreground">
-              <Calendar className="h-4 w-4" />
+            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Calendar className="size-3 shrink-0" />
               <span>{formatDate(deployment.dateDeployed)}</span>
             </div>
           )}
-
-          {deployment.organization && (
-            <div className="text-muted-foreground">
-              <span className="font-medium">Org:</span>{" "}
-              {deployment.organization}
-            </div>
+          {deployment.website && (
+            <Button variant="ghost" size="sm" asChild>
+              <a href={deployment.website} target="_blank">
+                <ExternalLink />
+              </a>
+            </Button>
           )}
         </div>
-      </CardContent>
+        <div className="flex gap-2">
+          <Badge
+            style={{
+              backgroundColor: PROGRAM_COLORS[deployment.program],
+              color: "white",
+            }}
+          >
+            {PROGRAM_LABELS[deployment.program]}
+          </Badge>
+          <Badge className="capitalize">{deployment.status || "unknown"}</Badge>
+        </div>
+      </CardFooter>
     </Card>
   );
 }

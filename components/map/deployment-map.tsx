@@ -10,7 +10,7 @@ import type { Deployment } from "@/types/deployment";
 import maplibregl from "maplibre-gl";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
-import Supercluster from "supercluster";
+import Supercluster, { ClusterFeature, PointFeature } from "supercluster";
 
 interface DeploymentMapProps {
   deployments: Deployment[];
@@ -301,17 +301,44 @@ export function DeploymentMap({
     markers.current = [];
     markerElementsMap.current.clear();
 
-    // Create supercluster index only if clustering is enabled
-    const cluster = enableClustering
-      ? new Supercluster<Deployment>({
-          radius: 60,
-          maxZoom: 16,
-          minPoints: 2,
-        })
+    // Group deployments by program for separate clustering
+    const deploymentsByProgram = deployments.reduce((acc, deployment) => {
+      if (!acc[deployment.program]) {
+        acc[deployment.program] = [];
+      }
+      acc[deployment.program].push(deployment);
+      return acc;
+    }, {} as Record<string, Deployment[]>);
+
+    // Create separate supercluster instances for each program
+    const clustersByProgram = enableClustering
+      ? Object.entries(deploymentsByProgram).reduce((acc, [program, deps]) => {
+          const cluster = new Supercluster<Deployment>({
+            radius: 60,
+            maxZoom: 16,
+            minPoints: 2,
+          });
+
+          const features = deps.map((deployment) => ({
+            type: "Feature" as const,
+            geometry: {
+              type: "Point" as const,
+              coordinates: [
+                deployment.location.longitude,
+                deployment.location.latitude,
+              ],
+            },
+            properties: deployment,
+          }));
+
+          cluster.load(features);
+          acc[program] = cluster;
+          return acc;
+        }, {} as Record<string, Supercluster<Deployment>>)
       : null;
 
-    // Convert deployments to GeoJSON features
-    const features = deployments.map((deployment) => ({
+    // Convert all deployments to GeoJSON features (for non-clustered mode)
+    const allFeatures = deployments.map((deployment) => ({
       type: "Feature" as const,
       geometry: {
         type: "Point" as const,
@@ -323,10 +350,6 @@ export function DeploymentMap({
       properties: deployment,
     }));
 
-    if (cluster) {
-      cluster.load(features);
-    }
-
     const updateMarkers = () => {
       if (!map.current) return;
 
@@ -334,18 +357,37 @@ export function DeploymentMap({
       const zoom = map.current.getZoom();
 
       // Get clusters or individual points based on enableClustering
-      const clusters =
-        enableClustering && cluster
-          ? cluster.getClusters(
-              [
-                bounds.getWest(),
-                bounds.getSouth(),
-                bounds.getEast(),
-                bounds.getNorth(),
-              ],
-              Math.floor(zoom)
-            )
-          : features; // If clustering disabled, show all features
+      let allClusters: Array<
+        PointFeature<Deployment> | ClusterFeature<{ program?: string }>
+      > = [];
+
+      if (enableClustering && clustersByProgram) {
+        // Get clusters from each program separately
+        Object.entries(clustersByProgram).forEach(([program, cluster]) => {
+          const programClusters = cluster.getClusters(
+            [
+              bounds.getWest(),
+              bounds.getSouth(),
+              bounds.getEast(),
+              bounds.getNorth(),
+            ],
+            Math.floor(zoom)
+          );
+          // Add program info to each cluster for color coding
+          programClusters.forEach((c) => {
+            if (c.properties && "cluster" in c.properties) {
+              (c.properties as { program?: string; cluster: boolean }).program =
+                program;
+            }
+          });
+          allClusters.push(...programClusters);
+        });
+      } else {
+        // If clustering disabled, show all features
+        allClusters = allFeatures as Array<
+          PointFeature<Deployment> | ClusterFeature<{ program?: string }>
+        >;
+      }
 
       // Clear existing markers
       markers.current.forEach((marker) => marker.remove());
@@ -357,7 +399,7 @@ export function DeploymentMap({
         lngLat: [number, number];
       }> = [];
 
-      clusters.forEach((clusterPoint) => {
+      allClusters.forEach((clusterPoint) => {
         const [lng, lat] = clusterPoint.geometry.coordinates;
         const properties = clusterPoint.properties;
 
@@ -370,25 +412,29 @@ export function DeploymentMap({
           const clusterLeaves =
             (properties as { point_count?: number }).point_count || 0;
           const clusterId = (properties as { cluster_id?: number }).cluster_id;
+          const program = (properties as { program?: string }).program;
 
-          // For simplicity, use first deployment's color
-          const firstDeployment = deployments[0];
-          const color = firstDeployment
-            ? PROGRAM_COLORS[firstDeployment.program]
+          // Use the program's color for the cluster
+          const color = program
+            ? PROGRAM_COLORS[program as keyof typeof PROGRAM_COLORS]
             : "#6B7280";
 
           const el = createClusterMarkerElement(clusterLeaves, color);
 
           el.addEventListener("click", () => {
-            if (map.current && clusterId && cluster) {
-              const expansionZoom = Math.min(
-                cluster.getClusterExpansionZoom?.(clusterId) || zoom + 2,
-                20
-              );
-              map.current.flyTo({
-                center: [lng, lat],
-                zoom: expansionZoom,
-              });
+            if (map.current && clusterId && program && clustersByProgram) {
+              const programCluster = clustersByProgram[program];
+              if (programCluster) {
+                const expansionZoom = Math.min(
+                  programCluster.getClusterExpansionZoom?.(clusterId) ||
+                    zoom + 2,
+                  20
+                );
+                map.current.flyTo({
+                  center: [lng, lat],
+                  zoom: expansionZoom,
+                });
+              }
             }
             if (!introAnimationComplete) {
               setIntroAnimationComplete(true);
